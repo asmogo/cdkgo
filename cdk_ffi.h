@@ -674,82 +674,96 @@ static void call_UniffiCallbackInterfaceWalletDatabaseMethod20(
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD21
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD21
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod21)(uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod21)(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer unit, RustBuffer state, UniffiForeignFutureCompleteU64 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod21(
-				UniffiCallbackInterfaceWalletDatabaseMethod21 cb, uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod21 cb, uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer unit, RustBuffer state, UniffiForeignFutureCompleteU64 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, ys, state, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, mint_url, unit, state, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD22
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD22
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod22)(uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod22)(uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod22(
-				UniffiCallbackInterfaceWalletDatabaseMethod22 cb, uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod22 cb, uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, keyset_id, count, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, ys, state, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD23
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD23
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod23)(uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod23)(uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod23(
-				UniffiCallbackInterfaceWalletDatabaseMethod23 cb, uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod23 cb, uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, transaction, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, keyset_id, count, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD24
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD24
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod24)(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod24)(uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod24(
-				UniffiCallbackInterfaceWalletDatabaseMethod24 cb, uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod24 cb, uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, transaction_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, transaction, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD25
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD25
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod25)(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer direction, RustBuffer unit, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod25)(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod25(
-				UniffiCallbackInterfaceWalletDatabaseMethod25 cb, uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer direction, RustBuffer unit, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod25 cb, uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, mint_url, direction, unit, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, transaction_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD26
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD26
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod26)(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod26)(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer direction, RustBuffer unit, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod26(
-				UniffiCallbackInterfaceWalletDatabaseMethod26 cb, uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod26 cb, uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer direction, RustBuffer unit, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+{
+	return cb(uniffi_handle, mint_url, direction, unit, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+}
+
+
+#endif
+#ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD27
+#define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD27
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod27)(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+
+// Making function static works arround:
+// https://github.com/golang/go/issues/11263
+static void call_UniffiCallbackInterfaceWalletDatabaseMethod27(
+				UniffiCallbackInterfaceWalletDatabaseMethod27 cb, uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
 	return cb(uniffi_handle, transaction_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
@@ -780,12 +794,13 @@ typedef struct UniffiVTableCallbackInterfaceWalletDatabase {
     UniffiCallbackInterfaceWalletDatabaseMethod18 removeKeys;
     UniffiCallbackInterfaceWalletDatabaseMethod19 updateProofs;
     UniffiCallbackInterfaceWalletDatabaseMethod20 getProofs;
-    UniffiCallbackInterfaceWalletDatabaseMethod21 updateProofsState;
-    UniffiCallbackInterfaceWalletDatabaseMethod22 incrementKeysetCounter;
-    UniffiCallbackInterfaceWalletDatabaseMethod23 addTransaction;
-    UniffiCallbackInterfaceWalletDatabaseMethod24 getTransaction;
-    UniffiCallbackInterfaceWalletDatabaseMethod25 listTransactions;
-    UniffiCallbackInterfaceWalletDatabaseMethod26 removeTransaction;
+    UniffiCallbackInterfaceWalletDatabaseMethod21 getBalance;
+    UniffiCallbackInterfaceWalletDatabaseMethod22 updateProofsState;
+    UniffiCallbackInterfaceWalletDatabaseMethod23 incrementKeysetCounter;
+    UniffiCallbackInterfaceWalletDatabaseMethod24 addTransaction;
+    UniffiCallbackInterfaceWalletDatabaseMethod25 getTransaction;
+    UniffiCallbackInterfaceWalletDatabaseMethod26 listTransactions;
+    UniffiCallbackInterfaceWalletDatabaseMethod27 removeTransaction;
     UniffiCallbackInterfaceFree uniffiFree;
 } UniffiVTableCallbackInterfaceWalletDatabase;
 
@@ -940,6 +955,11 @@ uint64_t uniffi_cdk_ffi_fn_method_multimintwallet_add_mint(void* ptr, RustBuffer
 uint64_t uniffi_cdk_ffi_fn_method_multimintwallet_check_all_mint_quotes(void* ptr, RustBuffer mint_url
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_MULTIMINTWALLET_CHECK_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_MULTIMINTWALLET_CHECK_MINT_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_multimintwallet_check_mint_quote(void* ptr, RustBuffer mint_url, RustBuffer quote_id
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_MULTIMINTWALLET_CONSOLIDATE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_MULTIMINTWALLET_CONSOLIDATE
 uint64_t uniffi_cdk_ffi_fn_method_multimintwallet_consolidate(void* ptr
@@ -1033,6 +1053,11 @@ RustBuffer uniffi_cdk_ffi_fn_method_multimintwallet_unit(void* ptr, RustCallStat
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_MULTIMINTWALLET_VERIFY_TOKEN_DLEQ
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_MULTIMINTWALLET_VERIFY_TOKEN_DLEQ
 uint64_t uniffi_cdk_ffi_fn_method_multimintwallet_verify_token_dleq(void* ptr, void* token
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_MULTIMINTWALLET_WAIT_FOR_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_MULTIMINTWALLET_WAIT_FOR_MINT_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_multimintwallet_wait_for_mint_quote(void* ptr, RustBuffer mint_url, RustBuffer quote_id, RustBuffer split_target, RustBuffer spending_conditions, uint64_t timeout_secs
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CLONE_PREPAREDSEND
@@ -1155,6 +1180,16 @@ void* uniffi_cdk_ffi_fn_constructor_token_from_string(RustBuffer encoded_token, 
 RustBuffer uniffi_cdk_ffi_fn_method_token_encode(void* ptr, RustCallStatus *out_status
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_HTLC_HASHES
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_HTLC_HASHES
+RustBuffer uniffi_cdk_ffi_fn_method_token_htlc_hashes(void* ptr, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_LOCKTIMES
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_LOCKTIMES
+RustBuffer uniffi_cdk_ffi_fn_method_token_locktimes(void* ptr, RustCallStatus *out_status
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_MEMO
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_MEMO
 RustBuffer uniffi_cdk_ffi_fn_method_token_memo(void* ptr, RustCallStatus *out_status
@@ -1165,9 +1200,24 @@ RustBuffer uniffi_cdk_ffi_fn_method_token_memo(void* ptr, RustCallStatus *out_st
 RustBuffer uniffi_cdk_ffi_fn_method_token_mint_url(void* ptr, RustCallStatus *out_status
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_P2PK_PUBKEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_P2PK_PUBKEYS
+RustBuffer uniffi_cdk_ffi_fn_method_token_p2pk_pubkeys(void* ptr, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_P2PK_REFUND_PUBKEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_P2PK_REFUND_PUBKEYS
+RustBuffer uniffi_cdk_ffi_fn_method_token_p2pk_refund_pubkeys(void* ptr, RustCallStatus *out_status
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_PROOFS_SIMPLE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_PROOFS_SIMPLE
 RustBuffer uniffi_cdk_ffi_fn_method_token_proofs_simple(void* ptr, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_SPENDING_CONDITIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_SPENDING_CONDITIONS
+RustBuffer uniffi_cdk_ffi_fn_method_token_spending_conditions(void* ptr, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_TOKEN_TO_RAW_BYTES
@@ -1505,6 +1555,11 @@ uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_update_proofs(void* ptr, RustBu
 uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_get_proofs(void* ptr, RustBuffer mint_url, RustBuffer unit, RustBuffer state, RustBuffer spending_conditions
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_GET_BALANCE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_GET_BALANCE
+uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_get_balance(void* ptr, RustBuffer mint_url, RustBuffer unit, RustBuffer state
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_UPDATE_PROOFS_STATE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_UPDATE_PROOFS_STATE
 uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_update_proofs_state(void* ptr, RustBuffer ys, RustBuffer state
@@ -1533,6 +1588,166 @@ uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_list_transactions(void* ptr, Ru
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_REMOVE_TRANSACTION
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_REMOVE_TRANSACTION
 uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_remove_transaction(void* ptr, RustBuffer transaction_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CLONE_WALLETPOSTGRESDATABASE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CLONE_WALLETPOSTGRESDATABASE
+void* uniffi_cdk_ffi_fn_clone_walletpostgresdatabase(void* ptr, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FREE_WALLETPOSTGRESDATABASE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FREE_WALLETPOSTGRESDATABASE
+void uniffi_cdk_ffi_fn_free_walletpostgresdatabase(void* ptr, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CONSTRUCTOR_WALLETPOSTGRESDATABASE_NEW
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CONSTRUCTOR_WALLETPOSTGRESDATABASE_NEW
+void* uniffi_cdk_ffi_fn_constructor_walletpostgresdatabase_new(RustBuffer url, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_KEYS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_keys(void* ptr, RustBuffer keyset
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_MELT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_MELT_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_melt_quote(void* ptr, RustBuffer quote
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_mint(void* ptr, RustBuffer mint_url, RustBuffer mint_info
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT_KEYSETS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT_KEYSETS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_mint_keysets(void* ptr, RustBuffer mint_url, RustBuffer keysets
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_mint_quote(void* ptr, RustBuffer quote
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_TRANSACTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_TRANSACTION
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_transaction(void* ptr, RustBuffer transaction
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_CLONE_AS_TRAIT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_CLONE_AS_TRAIT
+void* uniffi_cdk_ffi_fn_method_walletpostgresdatabase_clone_as_trait(void* ptr, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_BALANCE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_BALANCE
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_balance(void* ptr, RustBuffer mint_url, RustBuffer unit, RustBuffer state
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_KEYS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_keys(void* ptr, RustBuffer id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_KEYSET_BY_ID
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_KEYSET_BY_ID
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_keyset_by_id(void* ptr, RustBuffer keyset_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MELT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MELT_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_melt_quote(void* ptr, RustBuffer quote_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MELT_QUOTES
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MELT_QUOTES
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_melt_quotes(void* ptr
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINT
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_mint(void* ptr, RustBuffer mint_url
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_KEYSETS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_KEYSETS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_mint_keysets(void* ptr, RustBuffer mint_url
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_mint_quote(void* ptr, RustBuffer quote_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_QUOTES
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_QUOTES
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_mint_quotes(void* ptr
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINTS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_MINTS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_mints(void* ptr
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_PROOFS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_PROOFS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_proofs(void* ptr, RustBuffer mint_url, RustBuffer unit, RustBuffer state, RustBuffer spending_conditions
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_TRANSACTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_TRANSACTION
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_transaction(void* ptr, RustBuffer transaction_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_INCREMENT_KEYSET_COUNTER
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_INCREMENT_KEYSET_COUNTER
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_increment_keyset_counter(void* ptr, RustBuffer keyset_id, uint32_t count
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_LIST_TRANSACTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_LIST_TRANSACTIONS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_list_transactions(void* ptr, RustBuffer mint_url, RustBuffer direction, RustBuffer unit
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_KEYS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_remove_keys(void* ptr, RustBuffer id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MELT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MELT_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_remove_melt_quote(void* ptr, RustBuffer quote_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MINT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MINT
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_remove_mint(void* ptr, RustBuffer mint_url
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MINT_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_remove_mint_quote(void* ptr, RustBuffer quote_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_TRANSACTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_REMOVE_TRANSACTION
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_remove_transaction(void* ptr, RustBuffer transaction_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_UPDATE_MINT_URL
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_UPDATE_MINT_URL
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_update_mint_url(void* ptr, RustBuffer old_mint_url, RustBuffer new_mint_url
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_UPDATE_PROOFS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_UPDATE_PROOFS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_update_proofs(void* ptr, RustBuffer added, RustBuffer removed_ys
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_UPDATE_PROOFS_STATE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_UPDATE_PROOFS_STATE
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_update_proofs_state(void* ptr, RustBuffer ys, RustBuffer state
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CLONE_WALLETSQLITEDATABASE
@@ -1584,6 +1799,11 @@ uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_add_mint_quote(void* ptr,
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_ADD_TRANSACTION
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_ADD_TRANSACTION
 uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_add_transaction(void* ptr, RustBuffer transaction
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_GET_BALANCE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_GET_BALANCE
+uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_get_balance(void* ptr, RustBuffer mint_url, RustBuffer unit, RustBuffer state
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_GET_KEYS
@@ -1689,6 +1909,11 @@ uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_update_proofs(void* ptr, 
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_UPDATE_PROOFS_STATE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_UPDATE_PROOFS_STATE
 uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_update_proofs_state(void* ptr, RustBuffer ys, RustBuffer state
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_CREATE_WALLET_DB
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_CREATE_WALLET_DB
+void* uniffi_cdk_ffi_fn_func_create_wallet_db(RustBuffer backend, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_DECODE_AUTH_PROOF
@@ -2162,6 +2387,12 @@ void ffi_cdk_ffi_rust_future_free_void(uint64_t handle
 void ffi_cdk_ffi_rust_future_complete_void(uint64_t handle, RustCallStatus *out_status
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_CREATE_WALLET_DB
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_CREATE_WALLET_DB
+uint16_t uniffi_cdk_ffi_checksum_func_create_wallet_db(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_DECODE_AUTH_PROOF
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_DECODE_AUTH_PROOF
 uint16_t uniffi_cdk_ffi_checksum_func_decode_auth_proof(void
@@ -2510,6 +2741,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_multimintwallet_check_all_mint_quotes(vo
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_MULTIMINTWALLET_CHECK_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_MULTIMINTWALLET_CHECK_MINT_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_multimintwallet_check_mint_quote(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_MULTIMINTWALLET_CONSOLIDATE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_MULTIMINTWALLET_CONSOLIDATE
 uint16_t uniffi_cdk_ffi_checksum_method_multimintwallet_consolidate(void
@@ -2624,6 +2861,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_multimintwallet_verify_token_dleq(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_MULTIMINTWALLET_WAIT_FOR_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_MULTIMINTWALLET_WAIT_FOR_MINT_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_multimintwallet_wait_for_mint_quote(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_PREPAREDSEND_AMOUNT
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_PREPAREDSEND_AMOUNT
 uint16_t uniffi_cdk_ffi_checksum_method_preparedsend_amount(void
@@ -2720,6 +2963,18 @@ uint16_t uniffi_cdk_ffi_checksum_method_token_encode(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_HTLC_HASHES
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_HTLC_HASHES
+uint16_t uniffi_cdk_ffi_checksum_method_token_htlc_hashes(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_LOCKTIMES
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_LOCKTIMES
+uint16_t uniffi_cdk_ffi_checksum_method_token_locktimes(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_MEMO
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_MEMO
 uint16_t uniffi_cdk_ffi_checksum_method_token_memo(void
@@ -2732,9 +2987,27 @@ uint16_t uniffi_cdk_ffi_checksum_method_token_mint_url(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_P2PK_PUBKEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_P2PK_PUBKEYS
+uint16_t uniffi_cdk_ffi_checksum_method_token_p2pk_pubkeys(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_P2PK_REFUND_PUBKEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_P2PK_REFUND_PUBKEYS
+uint16_t uniffi_cdk_ffi_checksum_method_token_p2pk_refund_pubkeys(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_PROOFS_SIMPLE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_PROOFS_SIMPLE
 uint16_t uniffi_cdk_ffi_checksum_method_token_proofs_simple(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_SPENDING_CONDITIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_TOKEN_SPENDING_CONDITIONS
+uint16_t uniffi_cdk_ffi_checksum_method_token_spending_conditions(void
     
 );
 #endif
@@ -3104,6 +3377,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_get_proofs(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_GET_BALANCE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_GET_BALANCE
+uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_get_balance(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_UPDATE_PROOFS_STATE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_UPDATE_PROOFS_STATE
 uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_update_proofs_state(void
@@ -3140,6 +3419,180 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_remove_transaction(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_KEYS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_keys(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_MELT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_MELT_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_melt_quote(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_mint(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT_KEYSETS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT_KEYSETS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_mint_keysets(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_MINT_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_mint_quote(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_TRANSACTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_TRANSACTION
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_transaction(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_CLONE_AS_TRAIT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_CLONE_AS_TRAIT
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_clone_as_trait(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_BALANCE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_BALANCE
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_balance(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_KEYS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_keys(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_KEYSET_BY_ID
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_KEYSET_BY_ID
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_keyset_by_id(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MELT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MELT_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_melt_quote(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MELT_QUOTES
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MELT_QUOTES
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_melt_quotes(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINT
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_mint(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_KEYSETS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_KEYSETS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_mint_keysets(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_mint_quote(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_QUOTES
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINT_QUOTES
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_mint_quotes(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINTS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_MINTS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_mints(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_PROOFS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_PROOFS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_proofs(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_TRANSACTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_TRANSACTION
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_transaction(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_INCREMENT_KEYSET_COUNTER
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_INCREMENT_KEYSET_COUNTER
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_increment_keyset_counter(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_LIST_TRANSACTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_LIST_TRANSACTIONS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_list_transactions(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_KEYS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_remove_keys(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MELT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MELT_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_remove_melt_quote(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MINT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MINT
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_remove_mint(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MINT_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_MINT_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_remove_mint_quote(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_TRANSACTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_REMOVE_TRANSACTION
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_remove_transaction(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_UPDATE_MINT_URL
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_UPDATE_MINT_URL
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_update_mint_url(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_UPDATE_PROOFS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_UPDATE_PROOFS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_update_proofs(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_UPDATE_PROOFS_STATE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_UPDATE_PROOFS_STATE
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_update_proofs_state(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_ADD_KEYS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_ADD_KEYS
 uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_add_keys(void
@@ -3173,6 +3626,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_add_mint_quote(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_ADD_TRANSACTION
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_ADD_TRANSACTION
 uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_add_transaction(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_GET_BALANCE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_GET_BALANCE
+uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_get_balance(void
     
 );
 #endif
@@ -3332,6 +3791,12 @@ uint16_t uniffi_cdk_ffi_checksum_constructor_wallet_new(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_CONSTRUCTOR_WALLETPOSTGRESDATABASE_NEW
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_CONSTRUCTOR_WALLETPOSTGRESDATABASE_NEW
+uint16_t uniffi_cdk_ffi_checksum_constructor_walletpostgresdatabase_new(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_CONSTRUCTOR_WALLETSQLITEDATABASE_NEW
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_CONSTRUCTOR_WALLETSQLITEDATABASE_NEW
 uint16_t uniffi_cdk_ffi_checksum_constructor_walletsqlitedatabase_new(void
@@ -3372,12 +3837,13 @@ uint32_t ffi_cdk_ffi_uniffi_contract_version(void
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod18(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod19(uint64_t uniffi_handle, RustBuffer added, RustBuffer removed_ys, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod20(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer unit, RustBuffer state, RustBuffer spending_conditions, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod21(uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod22(uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod23(uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod24(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod25(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer direction, RustBuffer unit, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod26(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod21(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer unit, RustBuffer state, UniffiForeignFutureCompleteU64 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod22(uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod23(uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod24(uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod25(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod26(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer direction, RustBuffer unit, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod27(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseFree(uint64_t handle);
 
 void cdk_ffi_uniffiFutureContinuationCallback(uint64_t, int8_t);
