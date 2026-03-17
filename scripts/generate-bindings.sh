@@ -14,6 +14,12 @@ OUT_DIR="${ROOT_DIR}/bindings"
 PACKAGE_DIR="${OUT_DIR}/cdkffi"
 
 mkdir -p "${OUT_DIR}"
+# Preserve native libraries for other platforms when regenerating.
+# Save them, wipe the directory, then restore.
+NATIVE_BACKUP="$(mktemp -d)"
+if [ -d "${PACKAGE_DIR}/native" ]; then
+    cp -a "${PACKAGE_DIR}/native" "${NATIVE_BACKUP}/native"
+fi
 rm -rf "${PACKAGE_DIR}"
 
 if [[ "${OSTYPE:-}" == darwin* ]]; then
@@ -63,6 +69,12 @@ uniffi-bindgen-go "${LIB_FILE}" \
     --config "${ROOT_DIR}/uniffi.toml" \
     --out-dir "${OUT_DIR}"
 popd >/dev/null
+
+# Restore native libraries from other platforms before copying the new one.
+if [ -d "${NATIVE_BACKUP}/native" ]; then
+    cp -a "${NATIVE_BACKUP}/native" "${PACKAGE_DIR}/native"
+fi
+rm -rf "${NATIVE_BACKUP}"
 
 mkdir -p "${PLATFORM_DIR}"
 cp "${LIB_FILE}" "${PLATFORM_DIR}/libcdk_ffi.${LIB_EXT}"
