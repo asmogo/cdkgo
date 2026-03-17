@@ -19,12 +19,18 @@ jobs:
           - os: ubuntu-latest
             native_path: bindings/cdkffi/native/linux_amd64/libcdk_ffi.so
             verify_sources: "true"
-          - os: macos-13
-            native_path: bindings/cdkffi/native/darwin_amd64/libcdk_ffi.dylib
-            verify_sources: "false"
+            target_arch: ""
+            platform_key: linux_amd64
           - os: macos-latest
             native_path: bindings/cdkffi/native/darwin_arm64/libcdk_ffi.dylib
             verify_sources: "false"
+            target_arch: ""
+            platform_key: darwin_arm64
+          - os: macos-latest
+            native_path: bindings/cdkffi/native/darwin_amd64/libcdk_ffi.dylib
+            verify_sources: "false"
+            target_arch: x86_64
+            platform_key: darwin_amd64
     runs-on: ${{ matrix.os }}
     env:
       CDK_REF: ${{ github.event.inputs.cdk_ref || 'main' }}
@@ -35,6 +41,8 @@ jobs:
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target_arch == 'x86_64' && 'x86_64-apple-darwin' || '' }}
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -43,6 +51,8 @@ jobs:
 
       - name: Cache Rust and Cargo
         uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.platform_key }}
 
       - name: Cache Go build
         uses: actions/cache@v4
@@ -56,6 +66,9 @@ jobs:
 
       - name: Generate bindings
         run: ./scripts/generate-bindings.sh
+        env:
+          TARGET_ARCH: ${{ matrix.target_arch }}
+          SKIP_BINDGEN: ${{ matrix.target_arch != '' && '1' || '' }}
 
       - name: Ensure generated source bindings are committed
         if: ${{ matrix.verify_sources == 'true' }}
@@ -67,11 +80,12 @@ jobs:
           test -f "${{ matrix.native_path }}" || { echo "Native library not found: ${{ matrix.native_path }}"; exit 1; }
 
       - name: Verify Go package
+        if: ${{ matrix.target_arch == '' }}
         run: ./scripts/verify-go.sh
 
       - name: Upload generated bindings artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cdk-go-bindings-${{ matrix.os }}-${{ github.sha }}
+          name: cdk-go-bindings-${{ matrix.platform_key }}-${{ github.sha }}
           path: |
             bindings/cdkffi

@@ -23,14 +23,17 @@ jobs:
             platform_key: linux_amd64
             native_lib: bindings/cdkffi/native/linux_amd64/libcdk_ffi.so
             include_sources: "true"
-          - os: macos-13
-            platform_key: darwin_amd64
-            native_lib: bindings/cdkffi/native/darwin_amd64/libcdk_ffi.dylib
-            include_sources: "false"
+            target_arch: ""
           - os: macos-latest
             platform_key: darwin_arm64
             native_lib: bindings/cdkffi/native/darwin_arm64/libcdk_ffi.dylib
             include_sources: "false"
+            target_arch: ""
+          - os: macos-latest
+            platform_key: darwin_amd64
+            native_lib: bindings/cdkffi/native/darwin_amd64/libcdk_ffi.dylib
+            include_sources: "false"
+            target_arch: x86_64
     runs-on: ${{ matrix.os }}
     env:
       CDK_REF: ${{ github.event.inputs.cdk_ref || 'main' }}
@@ -41,6 +44,8 @@ jobs:
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target_arch == 'x86_64' && 'x86_64-apple-darwin' || '' }}
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -49,11 +54,17 @@ jobs:
 
       - name: Cache Rust and Cargo
         uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.platform_key }}
 
       - name: Generate bindings for platform
         run: ./scripts/generate-bindings.sh
+        env:
+          TARGET_ARCH: ${{ matrix.target_arch }}
+          SKIP_BINDGEN: ${{ matrix.target_arch != '' && '1' || '' }}
 
       - name: Verify generated package
+        if: ${{ matrix.target_arch == '' }}
         run: ./scripts/verify-go.sh
 
       - name: Prepare artifact bundle
