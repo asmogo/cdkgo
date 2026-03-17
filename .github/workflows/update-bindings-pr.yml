@@ -44,8 +44,10 @@ jobs:
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: ${{ matrix.target_arch == 'x86_64' && 'x86_64-apple-darwin' || '' }}
+
+      - name: Add cross-compilation target
+        if: ${{ matrix.target_arch != '' }}
+        run: rustup target add x86_64-apple-darwin
 
       - name: Setup Go
         uses: actions/setup-go@v5
