@@ -14,47 +14,88 @@ OUT_DIR="${ROOT_DIR}/bindings"
 PACKAGE_DIR="${OUT_DIR}/cdkffi"
 
 mkdir -p "${OUT_DIR}"
+# Preserve native libraries for other platforms when regenerating.
+# Save them, wipe the directory, then restore.
+NATIVE_BACKUP="$(mktemp -d)"
+if [ -d "${PACKAGE_DIR}/native" ]; then
+    cp -a "${PACKAGE_DIR}/native" "${NATIVE_BACKUP}/native"
+fi
 rm -rf "${PACKAGE_DIR}"
 
 if [[ "${OSTYPE:-}" == darwin* ]]; then
-    LIB_FILE="${LIB_DIR}/libcdk_ffi.dylib"
     LIB_EXT="dylib"
     PLATFORM_OS="darwin"
 else
-    LIB_FILE="${LIB_DIR}/libcdk_ffi.so"
     LIB_EXT="so"
     PLATFORM_OS="linux"
 fi
 
+# Allow overriding the target architecture for cross-compilation.
+# E.g. TARGET_ARCH=x86_64 on an ARM Mac to produce a darwin_amd64 binary.
 UNAME_ARCH="$(uname -m)"
-case "${UNAME_ARCH}" in
-    x86_64)
-        PLATFORM_ARCH="amd64"
-        ;;
-    aarch64|arm64)
-        PLATFORM_ARCH="arm64"
-        ;;
+BUILD_ARCH="${TARGET_ARCH:-${UNAME_ARCH}}"
+
+case "${BUILD_ARCH}" in
+    x86_64)  PLATFORM_ARCH="amd64" ;;
+    aarch64|arm64) PLATFORM_ARCH="arm64" ;;
     *)
-        echo "Unsupported architecture for native artifact naming: ${UNAME_ARCH}" >&2
+        echo "Unsupported architecture: ${BUILD_ARCH}" >&2
         exit 1
         ;;
 esac
 
+if [[ "${PLATFORM_OS}" == "darwin" ]]; then
+    case "${PLATFORM_ARCH}" in
+        amd64) RUST_TARGET_TRIPLE="x86_64-apple-darwin" ;;
+        arm64) RUST_TARGET_TRIPLE="aarch64-apple-darwin" ;;
+    esac
+else
+    RUST_TARGET_TRIPLE="x86_64-unknown-linux-gnu"
+fi
+
+# When cross-compiling, Rust puts output under target/<triple>/<profile>.
+CROSS_COMPILING=false
+if [ "${BUILD_ARCH}" != "${UNAME_ARCH}" ]; then
+    CROSS_COMPILING=true
+    LIB_DIR="${CDK_DIR}/target/${RUST_TARGET_TRIPLE}/${BUILD_PROFILE}"
+fi
+
+LIB_FILE="${LIB_DIR}/libcdk_ffi.${LIB_EXT}"
 PLATFORM_DIR="${PACKAGE_DIR}/native/${PLATFORM_OS}_${PLATFORM_ARCH}"
 
-pushd "${CDK_DIR}" >/dev/null
+# Build the Rust cdk-ffi library.
+CARGO_ARGS=(--package cdk-ffi --features postgres)
 if [ "${BUILD_PROFILE}" = "release" ]; then
-    cargo build --release --package cdk-ffi --features postgres
-elif [ "${BUILD_PROFILE}" = "dev" ]; then
-    cargo build --package cdk-ffi --features postgres
-else
-    cargo build --profile "${BUILD_PROFILE}" --package cdk-ffi --features postgres
+    CARGO_ARGS+=(--release)
+elif [ "${BUILD_PROFILE}" != "dev" ]; then
+    CARGO_ARGS+=(--profile "${BUILD_PROFILE}")
 fi
+if [ "${CROSS_COMPILING}" = true ]; then
+    CARGO_ARGS+=(--target "${RUST_TARGET_TRIPLE}")
+fi
+
+pushd "${CDK_DIR}" >/dev/null
+cargo build "${CARGO_ARGS[@]}"
 popd >/dev/null
 
 if [ ! -f "${LIB_FILE}" ]; then
     echo "Expected library not found: ${LIB_FILE}" >&2
     exit 1
+fi
+
+# When SKIP_BINDGEN is set (e.g. cross-compilation), only produce the native
+# library without generating Go source bindings or link files.
+if [ "${SKIP_BINDGEN:-}" = "1" ]; then
+    # Restore native libraries from other platforms.
+    if [ -d "${NATIVE_BACKUP}/native" ]; then
+        cp -a "${NATIVE_BACKUP}/native" "${PACKAGE_DIR}/native"
+    fi
+    rm -rf "${NATIVE_BACKUP}"
+
+    mkdir -p "${PLATFORM_DIR}"
+    cp "${LIB_FILE}" "${PLATFORM_DIR}/libcdk_ffi.${LIB_EXT}"
+    echo "Built native library for ${PLATFORM_OS}_${PLATFORM_ARCH} (bindgen skipped)"
+    exit 0
 fi
 
 pushd "${CDK_DIR}" >/dev/null
@@ -63,6 +104,12 @@ uniffi-bindgen-go "${LIB_FILE}" \
     --config "${ROOT_DIR}/uniffi.toml" \
     --out-dir "${OUT_DIR}"
 popd >/dev/null
+
+# Restore native libraries from other platforms before copying the new one.
+if [ -d "${NATIVE_BACKUP}/native" ]; then
+    cp -a "${NATIVE_BACKUP}/native" "${PACKAGE_DIR}/native"
+fi
+rm -rf "${NATIVE_BACKUP}"
 
 mkdir -p "${PLATFORM_DIR}"
 cp "${LIB_FILE}" "${PLATFORM_DIR}/libcdk_ffi.${LIB_EXT}"

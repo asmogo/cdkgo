@@ -23,10 +23,6 @@ jobs:
             platform_key: linux_amd64
             native_lib: bindings/cdkffi/native/linux_amd64/libcdk_ffi.so
             include_sources: "true"
-          - os: macos-13
-            platform_key: darwin_amd64
-            native_lib: bindings/cdkffi/native/darwin_amd64/libcdk_ffi.dylib
-            include_sources: "false"
           - os: macos-latest
             platform_key: darwin_arm64
             native_lib: bindings/cdkffi/native/darwin_arm64/libcdk_ffi.dylib
@@ -49,6 +45,8 @@ jobs:
 
       - name: Cache Rust and Cargo
         uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.platform_key }}
 
       - name: Generate bindings for platform
         run: ./scripts/generate-bindings.sh
@@ -107,7 +105,7 @@ jobs:
 
             - CDK ref requested: `${{ env.CDK_REF }}`
             - Generated commit: `${{ steps.cdk_commit.outputs.value }}`
-            - Updated native libs: linux_amd64, darwin_amd64, darwin_arm64
+            - Updated native libs: linux_amd64, darwin_arm64
           branch: automation/update-bindings
           delete-branch: true
           labels: |
