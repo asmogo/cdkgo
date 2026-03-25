@@ -36,6 +36,9 @@ jobs:
           test -f bindings/cdkffi/native/linux_amd64/libcdk_ffi.so
           test -f bindings/cdkffi/native/darwin_arm64/libcdk_ffi.dylib
 
+      - name: Verify native library checksums
+        run: ./scripts/verify-checksums.sh
+
       - name: Verify package on Linux
         run: ./scripts/verify-go.sh
 

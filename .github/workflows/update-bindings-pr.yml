@@ -91,6 +91,9 @@ jobs:
           mkdir -p bindings/cdkffi
           cp -R .artifacts/bindings/cdkffi/* bindings/cdkffi/
 
+      - name: Regenerate checksums from merged artifacts
+        run: ./scripts/update-checksums.sh
+
       - name: Capture generated CDK commit
         id: cdk_commit
         run: echo "value=$(cat bindings/cdkffi/CDK_COMMIT)" >> "$GITHUB_OUTPUT"
