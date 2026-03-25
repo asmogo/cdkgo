@@ -6,8 +6,8 @@ ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 WORK_DIR="${ROOT_DIR}/.work"
 CDK_DIR="${WORK_DIR}/cdk"
 
-CDK_REPO="${CDK_REPO:-https://github.com/asmogo/cdk.git}"
-CDK_REF="${CDK_REF:-main}"
+CDK_REPO="${CDK_REPO:-https://github.com/cashubtc/cdk.git}"
+CDK_REF="${CDK_REF:-v0.15.1}"
 
 mkdir -p "${WORK_DIR}"
 
