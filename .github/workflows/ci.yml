@@ -67,6 +67,9 @@ jobs:
         run: |
           test -f "${{ matrix.native_path }}" || { echo "Native library not found: ${{ matrix.native_path }}"; exit 1; }
 
+      - name: Verify native library checksums
+        run: ./scripts/verify-checksums.sh
+
       - name: Verify Go package
         run: ./scripts/verify-go.sh
 

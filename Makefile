@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
 
-.PHONY: bootstrap install-bindgen generate verify clean
+.PHONY: bootstrap install-bindgen generate verify verify-checksums update-checksums clean
 
 bootstrap:
 	./scripts/bootstrap-cdk.sh
@@ -13,6 +13,12 @@ generate:
 
 verify:
 	./scripts/verify-go.sh
+
+verify-checksums:
+	./scripts/verify-checksums.sh
+
+update-checksums:
+	./scripts/update-checksums.sh
 
 clean:
 	rm -rf .work bindings/cdkffi

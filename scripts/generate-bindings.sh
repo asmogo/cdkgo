@@ -97,6 +97,8 @@ if [ "${SKIP_BINDGEN:-}" = "1" ]; then
     if [[ "${PLATFORM_OS}" == "darwin" ]]; then
         install_name_tool -id "@rpath/libcdk_ffi.dylib" "${PLATFORM_DIR}/libcdk_ffi.dylib"
     fi
+    # Regenerate checksums to include the newly built library.
+    "${SCRIPT_DIR}/update-checksums.sh"
     echo "Built native library for ${PLATFORM_OS}_${PLATFORM_ARCH} (bindgen skipped)"
     exit 0
 fi
@@ -148,5 +150,8 @@ package cdk_ffi
 // #cgo LDFLAGS: -L${SRCDIR}/native/darwin_arm64 -lcdk_ffi -Wl,-rpath,${SRCDIR}/native/darwin_arm64 -lm
 import "C"
 EOF
+
+# Regenerate the checksum file for all currently committed native libraries.
+"${SCRIPT_DIR}/update-checksums.sh"
 
 echo "Generated Go bindings in ${PACKAGE_DIR} (${PLATFORM_OS}_${PLATFORM_ARCH})"

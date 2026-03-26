@@ -10,6 +10,9 @@ if [ ! -f "${PACKAGE_DIR}/cdk_ffi.go" ]; then
     exit 1
 fi
 
+# Verify integrity of native libraries before running any Go code.
+"${SCRIPT_DIR}/verify-checksums.sh"
+
 export CGO_ENABLED=1
 
 pushd "${ROOT_DIR}" >/dev/null
