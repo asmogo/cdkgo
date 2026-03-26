@@ -1472,6 +1472,15 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status()
+		})
+		if checksum != 23664 {
+			// If this happens try cleaning and rebuilding your project
+			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_check_proofs_spent()
 		})
 		if checksum != 31942 {
@@ -1603,6 +1612,15 @@ func uniffiCheckChecksums() {
 		if checksum != 32210 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable_quote()
+		})
+		if checksum != 20299 {
+			// If this happens try cleaning and rebuilding your project
+			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable_quote: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -5281,6 +5299,17 @@ type WalletInterface interface {
 	// function to work. If the quote is not stored locally, use `fetch_mint_quote`
 	// instead.
 	CheckMintQuote(quoteId string) (MintQuote, error)
+	// Check a mint quote status from the mint.
+	//
+	// Calls `GET /v1/mint/quote/{method}/{quote_id}` per NUT-04.
+	// Updates local store with current state from mint.
+	// If there was a crashed mid-mint (pending saga), attempts to complete it.
+	// Does NOT mint tokens directly - use mint() for that.
+	//
+	// **Note:** The mint quote must be known to the wallet (stored locally) for this
+	// function to work. If the quote is not stored locally, use `fetch_mint_quote`
+	// instead.
+	CheckMintQuoteStatus(quoteId string) (MintQuote, error)
 	// Check if proofs are spent
 	CheckProofsSpent(proofs []Proof) ([]bool, error)
 	// Check status of a pending send operation
@@ -5341,6 +5370,12 @@ type WalletInterface interface {
 	// The `network` parameter is forwarded to the BIP353 resolver for on-chain address
 	// validation in the resolved URI.
 	MeltHumanReadable(address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error)
+	// Get a quote for a human-readable address melt
+	//
+	// Accepts a human-readable address that could be either a BIP353 address
+	// or a Lightning address. Tries BIP353 first if mint supports Bolt12,
+	// falls back to Lightning address.
+	MeltHumanReadableQuote(address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error)
 	// Get a quote for a Lightning address melt
 	//
 	// This method resolves a Lightning address (e.g., "alice@example.com") to a Lightning invoice
@@ -5585,6 +5620,51 @@ func (_self *Wallet) CheckMintQuote(quoteId string) (MintQuote, error) {
 			return FfiConverterMintQuoteINSTANCE.Lift(ffi)
 		},
 		C.uniffi_cdk_ffi_fn_method_wallet_check_mint_quote(
+			_pointer, FfiConverterStringINSTANCE.Lower(quoteId)),
+		// pollFn
+		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
+		},
+		// freeFn
+		func(handle C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_free_rust_buffer(handle)
+		},
+	)
+
+	if err == nil {
+		return res, nil
+	}
+
+	return res, err
+}
+
+// Check a mint quote status from the mint.
+//
+// Calls `GET /v1/mint/quote/{method}/{quote_id}` per NUT-04.
+// Updates local store with current state from mint.
+// If there was a crashed mid-mint (pending saga), attempts to complete it.
+// Does NOT mint tokens directly - use mint() for that.
+//
+// **Note:** The mint quote must be known to the wallet (stored locally) for this
+// function to work. If the quote is not stored locally, use `fetch_mint_quote`
+// instead.
+func (_self *Wallet) CheckMintQuoteStatus(quoteId string) (MintQuote, error) {
+	_pointer := _self.ffiObject.incrementPointer("*Wallet")
+	defer _self.ffiObject.decrementPointer()
+	res, err := uniffiRustCallAsync[FfiError](
+		FfiConverterFfiErrorINSTANCE,
+		// completeFn
+		func(handle C.uint64_t, status *C.RustCallStatus) RustBufferI {
+			res := C.ffi_cdk_ffi_rust_future_complete_rust_buffer(handle, status)
+			return GoRustBuffer{
+				inner: res,
+			}
+		},
+		// liftFn
+		func(ffi RustBufferI) MintQuote {
+			return FfiConverterMintQuoteINSTANCE.Lift(ffi)
+		},
+		C.uniffi_cdk_ffi_fn_method_wallet_check_mint_quote_status(
 			_pointer, FfiConverterStringINSTANCE.Lower(quoteId)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
@@ -6151,6 +6231,46 @@ func (_self *Wallet) MeltHumanReadable(address string, amountMsat Amount, networ
 			return FfiConverterMeltQuoteINSTANCE.Lift(ffi)
 		},
 		C.uniffi_cdk_ffi_fn_method_wallet_melt_human_readable(
+			_pointer, FfiConverterStringINSTANCE.Lower(address), FfiConverterAmountINSTANCE.Lower(amountMsat), FfiConverterBitcoinNetworkINSTANCE.Lower(network)),
+		// pollFn
+		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
+		},
+		// freeFn
+		func(handle C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_free_rust_buffer(handle)
+		},
+	)
+
+	if err == nil {
+		return res, nil
+	}
+
+	return res, err
+}
+
+// Get a quote for a human-readable address melt
+//
+// Accepts a human-readable address that could be either a BIP353 address
+// or a Lightning address. Tries BIP353 first if mint supports Bolt12,
+// falls back to Lightning address.
+func (_self *Wallet) MeltHumanReadableQuote(address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error) {
+	_pointer := _self.ffiObject.incrementPointer("*Wallet")
+	defer _self.ffiObject.decrementPointer()
+	res, err := uniffiRustCallAsync[FfiError](
+		FfiConverterFfiErrorINSTANCE,
+		// completeFn
+		func(handle C.uint64_t, status *C.RustCallStatus) RustBufferI {
+			res := C.ffi_cdk_ffi_rust_future_complete_rust_buffer(handle, status)
+			return GoRustBuffer{
+				inner: res,
+			}
+		},
+		// liftFn
+		func(ffi RustBufferI) MeltQuote {
+			return FfiConverterMeltQuoteINSTANCE.Lift(ffi)
+		},
+		C.uniffi_cdk_ffi_fn_method_wallet_melt_human_readable_quote(
 			_pointer, FfiConverterStringINSTANCE.Lower(address), FfiConverterAmountINSTANCE.Lower(amountMsat), FfiConverterBitcoinNetworkINSTANCE.Lower(network)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
@@ -16481,6 +16601,8 @@ func (_ FfiDestroyerMeltMethodSettings) Destroy(value MeltMethodSettings) {
 type MeltQuote struct {
 	// Quote ID
 	Id string
+	// Mint URL
+	MintUrl *MintUrl
 	// Quote amount
 	Amount Amount
 	// Currency unit
@@ -16505,6 +16627,7 @@ type MeltQuote struct {
 
 func (r *MeltQuote) Destroy() {
 	FfiDestroyerString{}.Destroy(r.Id)
+	FfiDestroyerOptionalMintUrl{}.Destroy(r.MintUrl)
 	FfiDestroyerAmount{}.Destroy(r.Amount)
 	FfiDestroyerCurrencyUnit{}.Destroy(r.Unit)
 	FfiDestroyerString{}.Destroy(r.Request)
@@ -16528,6 +16651,7 @@ func (c FfiConverterMeltQuote) Lift(rb RustBufferI) MeltQuote {
 func (c FfiConverterMeltQuote) Read(reader io.Reader) MeltQuote {
 	return MeltQuote{
 		FfiConverterStringINSTANCE.Read(reader),
+		FfiConverterOptionalMintUrlINSTANCE.Read(reader),
 		FfiConverterAmountINSTANCE.Read(reader),
 		FfiConverterCurrencyUnitINSTANCE.Read(reader),
 		FfiConverterStringINSTANCE.Read(reader),
@@ -16551,6 +16675,7 @@ func (c FfiConverterMeltQuote) LowerExternal(value MeltQuote) ExternalCRustBuffe
 
 func (c FfiConverterMeltQuote) Write(writer io.Writer, value MeltQuote) {
 	FfiConverterStringINSTANCE.Write(writer, value.Id)
+	FfiConverterOptionalMintUrlINSTANCE.Write(writer, value.MintUrl)
 	FfiConverterAmountINSTANCE.Write(writer, value.Amount)
 	FfiConverterCurrencyUnitINSTANCE.Write(writer, value.Unit)
 	FfiConverterStringINSTANCE.Write(writer, value.Request)

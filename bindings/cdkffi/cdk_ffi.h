@@ -1500,6 +1500,11 @@ uint64_t uniffi_cdk_ffi_fn_method_wallet_check_all_pending_proofs(void* ptr
 uint64_t uniffi_cdk_ffi_fn_method_wallet_check_mint_quote(void* ptr, RustBuffer quote_id
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_MINT_QUOTE_STATUS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_MINT_QUOTE_STATUS
+uint64_t uniffi_cdk_ffi_fn_method_wallet_check_mint_quote_status(void* ptr, RustBuffer quote_id
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_PROOFS_SPENT
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_PROOFS_SPENT
 uint64_t uniffi_cdk_ffi_fn_method_wallet_check_proofs_spent(void* ptr, RustBuffer proofs
@@ -1573,6 +1578,11 @@ uint64_t uniffi_cdk_ffi_fn_method_wallet_melt_bip353_quote(void* ptr, RustBuffer
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_HUMAN_READABLE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_HUMAN_READABLE
 uint64_t uniffi_cdk_ffi_fn_method_wallet_melt_human_readable(void* ptr, RustBuffer address, RustBuffer amount_msat, RustBuffer network
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_HUMAN_READABLE_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_HUMAN_READABLE_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_wallet_melt_human_readable_quote(void* ptr, RustBuffer address, RustBuffer amount_msat, RustBuffer network
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_LIGHTNING_ADDRESS_QUOTE
@@ -3845,6 +3855,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_MINT_QUOTE_STATUS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_MINT_QUOTE_STATUS
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_PROOFS_SPENT
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_PROOFS_SPENT
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_check_proofs_spent(void
@@ -3932,6 +3948,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_melt_bip353_quote(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_MELT_HUMAN_READABLE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_MELT_HUMAN_READABLE
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_MELT_HUMAN_READABLE_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_MELT_HUMAN_READABLE_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable_quote(void
     
 );
 #endif
