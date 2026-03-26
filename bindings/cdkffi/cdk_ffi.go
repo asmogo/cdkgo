@@ -374,15 +374,6 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_cdk_ffi_checksum_func_create_bip321_uri()
-		})
-		if checksum != 2479 {
-			// If this happens try cleaning and rebuilding your project
-			panic("cdk_ffi: uniffi_cdk_ffi_checksum_func_create_bip321_uri: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_func_create_wallet_db()
 		})
 		if checksum != 38981 {
@@ -842,15 +833,6 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_cdk_ffi_checksum_func_parse_bip321_payment_instruction()
-		})
-		if checksum != 49418 {
-			// If this happens try cleaning and rebuilding your project
-			panic("cdk_ffi: uniffi_cdk_ffi_checksum_func_parse_bip321_payment_instruction: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_func_proof_has_dleq()
 		})
 		if checksum != 56072 {
@@ -910,15 +892,6 @@ func uniffiCheckChecksums() {
 		if checksum != 58202 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_func_proofs_total_amount: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_cdk_ffi_checksum_func_resolve_bip353_payment_instruction()
-		})
-		if checksum != 39566 {
-			// If this happens try cleaning and rebuilding your project
-			panic("cdk_ffi: uniffi_cdk_ffi_checksum_func_resolve_bip353_payment_instruction: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -1015,7 +988,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_paymentrequest_mints()
 		})
-		if checksum != 17730 {
+		if checksum != 56555 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_paymentrequest_mints: UniFFI API checksum mismatch")
 		}
@@ -1036,24 +1009,6 @@ func uniffiCheckChecksums() {
 		if checksum != 17480 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_paymentrequest_single_use: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_cdk_ffi_checksum_method_paymentrequest_to_bech32_string()
-		})
-		if checksum != 10557 {
-			// If this happens try cleaning and rebuilding your project
-			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_paymentrequest_to_bech32_string: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_cdk_ffi_checksum_method_paymentrequest_to_bip321()
-		})
-		if checksum != 42766 {
-			// If this happens try cleaning and rebuilding your project
-			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_paymentrequest_to_bip321: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -1472,15 +1427,6 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status()
-		})
-		if checksum != 23664 {
-			// If this happens try cleaning and rebuilding your project
-			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_check_proofs_spent()
 		})
 		if checksum != 31942 {
@@ -1600,7 +1546,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_melt_bip353_quote()
 		})
-		if checksum != 1058 {
+		if checksum != 56775 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_melt_bip353_quote: UniFFI API checksum mismatch")
 		}
@@ -1609,18 +1555,9 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable()
 		})
-		if checksum != 32210 {
+		if checksum != 19936 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable_quote()
-		})
-		if checksum != 20299 {
-			// If this happens try cleaning and rebuilding your project
-			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable_quote: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -1819,15 +1756,6 @@ func uniffiCheckChecksums() {
 		if checksum != 26376 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_subscribe: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_cdk_ffi_checksum_method_wallet_subscribe_mint_quote_state()
-		})
-		if checksum != 53478 {
-			// If this happens try cleaning and rebuilding your project
-			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_subscribe_mint_quote_state: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -4035,29 +3963,11 @@ type PaymentRequestInterface interface {
 	// Get the description
 	Description() *string
 	// Get the list of acceptable mint URLs
-	Mints() []string
+	Mints() *[]string
 	// Get the payment ID
 	PaymentId() *string
 	// Get whether this is a single-use request
 	SingleUse() *bool
-	// Encode the payment request to a NUT-26 bech32m string (creqB prefix)
-	ToBech32String() (string, error)
-	// Convert this payment request to a BIP 321 `bitcoin:` URI string.
-	//
-	// The cashu payment request is encoded as a NUT-26 bech32m `CREQB1...`
-	// string in the `creq=` query parameter. Optionally include a BOLT11
-	// invoice (`lightning=`) and/or BOLT12 offer (`lno=`) as fallback
-	// payment methods for wallets that don't support cashu.
-	//
-	// ```text
-	// val request = PaymentRequest.fromString("CREQB1...")
-	// val uri = request.toBip321(
-	// bolt11 = "lnbc100n1p...",
-	// bolt12 = "lno1qgsq..."
-	// )
-	// // => "bitcoin:?creq=CREQB1...&lightning=lnbc100n1p...&lno=lno1qgsq..."
-	// ```
-	ToBip321(bolt11 *string, bolt12 *string) (string, error)
 	// Encode the payment request to a string
 	ToStringEncoded() string
 	// Get the transports for delivering the payment
@@ -4112,10 +4022,10 @@ func (_self *PaymentRequest) Description() *string {
 }
 
 // Get the list of acceptable mint URLs
-func (_self *PaymentRequest) Mints() []string {
+func (_self *PaymentRequest) Mints() *[]string {
 	_pointer := _self.ffiObject.incrementPointer("*PaymentRequest")
 	defer _self.ffiObject.decrementPointer()
-	return FfiConverterSequenceStringINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
+	return FfiConverterOptionalSequenceStringINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
 		return GoRustBuffer{
 			inner: C.uniffi_cdk_ffi_fn_method_paymentrequest_mints(
 				_pointer, _uniffiStatus),
@@ -4145,56 +4055,6 @@ func (_self *PaymentRequest) SingleUse() *bool {
 				_pointer, _uniffiStatus),
 		}
 	}))
-}
-
-// Encode the payment request to a NUT-26 bech32m string (creqB prefix)
-func (_self *PaymentRequest) ToBech32String() (string, error) {
-	_pointer := _self.ffiObject.incrementPointer("*PaymentRequest")
-	defer _self.ffiObject.decrementPointer()
-	_uniffiRV, _uniffiErr := rustCallWithError[FfiError](FfiConverterFfiError{}, func(_uniffiStatus *C.RustCallStatus) RustBufferI {
-		return GoRustBuffer{
-			inner: C.uniffi_cdk_ffi_fn_method_paymentrequest_to_bech32_string(
-				_pointer, _uniffiStatus),
-		}
-	})
-	if _uniffiErr != nil {
-		var _uniffiDefaultValue string
-		return _uniffiDefaultValue, _uniffiErr
-	} else {
-		return FfiConverterStringINSTANCE.Lift(_uniffiRV), nil
-	}
-}
-
-// Convert this payment request to a BIP 321 `bitcoin:` URI string.
-//
-// The cashu payment request is encoded as a NUT-26 bech32m `CREQB1...`
-// string in the `creq=` query parameter. Optionally include a BOLT11
-// invoice (`lightning=`) and/or BOLT12 offer (`lno=`) as fallback
-// payment methods for wallets that don't support cashu.
-//
-// ```text
-// val request = PaymentRequest.fromString("CREQB1...")
-// val uri = request.toBip321(
-// bolt11 = "lnbc100n1p...",
-// bolt12 = "lno1qgsq..."
-// )
-// // => "bitcoin:?creq=CREQB1...&lightning=lnbc100n1p...&lno=lno1qgsq..."
-// ```
-func (_self *PaymentRequest) ToBip321(bolt11 *string, bolt12 *string) (string, error) {
-	_pointer := _self.ffiObject.incrementPointer("*PaymentRequest")
-	defer _self.ffiObject.decrementPointer()
-	_uniffiRV, _uniffiErr := rustCallWithError[FfiError](FfiConverterFfiError{}, func(_uniffiStatus *C.RustCallStatus) RustBufferI {
-		return GoRustBuffer{
-			inner: C.uniffi_cdk_ffi_fn_method_paymentrequest_to_bip321(
-				_pointer, FfiConverterOptionalStringINSTANCE.Lower(bolt11), FfiConverterOptionalStringINSTANCE.Lower(bolt12), _uniffiStatus),
-		}
-	})
-	if _uniffiErr != nil {
-		var _uniffiDefaultValue string
-		return _uniffiDefaultValue, _uniffiErr
-	} else {
-		return FfiConverterStringINSTANCE.Lift(_uniffiRV), nil
-	}
 }
 
 // Encode the payment request to a string
@@ -5299,17 +5159,6 @@ type WalletInterface interface {
 	// function to work. If the quote is not stored locally, use `fetch_mint_quote`
 	// instead.
 	CheckMintQuote(quoteId string) (MintQuote, error)
-	// Check a mint quote status from the mint.
-	//
-	// Calls `GET /v1/mint/quote/{method}/{quote_id}` per NUT-04.
-	// Updates local store with current state from mint.
-	// If there was a crashed mid-mint (pending saga), attempts to complete it.
-	// Does NOT mint tokens directly - use mint() for that.
-	//
-	// **Note:** The mint quote must be known to the wallet (stored locally) for this
-	// function to work. If the quote is not stored locally, use `fetch_mint_quote`
-	// instead.
-	CheckMintQuoteStatus(quoteId string) (MintQuote, error)
 	// Check if proofs are spent
 	CheckProofsSpent(proofs []Proof) ([]bool, error)
 	// Check status of a pending send operation
@@ -5351,31 +5200,19 @@ type WalletInterface interface {
 	LoadMintInfo() (MintInfo, error)
 	// Get a quote for a BIP353 melt
 	//
-	// This method resolves a BIP353 address (e.g., "alice@example.com") to a Bitcoin
-	// payment instruction, requires a BOLT12 offer, and then creates a melt quote for it.
-	//
-	// The `network` parameter controls which on-chain address prefixes are accepted
-	// in the resolved URI.
-	MeltBip353Quote(bip353Address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error)
+	// This method resolves a BIP353 address (e.g., "alice@example.com") to a Lightning offer
+	// and then creates a melt quote for that offer.
+	MeltBip353Quote(bip353Address string, amountMsat Amount) (MeltQuote, error)
 	// Get a quote for a human-readable address melt
 	//
 	// This method accepts a human-readable address that could be either a BIP353 address
 	// or a Lightning address. It intelligently determines which to try based on mint support:
 	//
 	// 1. If the mint supports Bolt12, it tries BIP353 first
-	// 2. Falls back to Lightning address only if BIP353 resolution fails
-	// 3. If BIP353 resolves but has no usable BOLT12 offer, it does NOT fall back
+	// 2. Falls back to Lightning address only if BIP353 DNS resolution fails
+	// 3. If BIP353 resolves but fails at the mint, it does NOT fall back to Lightning address
 	// 4. If the mint doesn't support Bolt12, it tries Lightning address directly
-	//
-	// The `network` parameter is forwarded to the BIP353 resolver for on-chain address
-	// validation in the resolved URI.
-	MeltHumanReadable(address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error)
-	// Get a quote for a human-readable address melt
-	//
-	// Accepts a human-readable address that could be either a BIP353 address
-	// or a Lightning address. Tries BIP353 first if mint supports Bolt12,
-	// falls back to Lightning address.
-	MeltHumanReadableQuote(address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error)
+	MeltHumanReadable(address string, amountMsat Amount) (MeltQuote, error)
 	// Get a quote for a Lightning address melt
 	//
 	// This method resolves a Lightning address (e.g., "alice@example.com") to a Lightning invoice
@@ -5472,20 +5309,6 @@ type WalletInterface interface {
 	SetRefreshToken(refreshToken string) error
 	// Subscribe to wallet events
 	Subscribe(params SubscribeParams) (*ActiveSubscription, error)
-	// Subscribe to mint quote state updates
-	//
-	// Convenience method that creates a subscription to receive notifications
-	// when any of the given mint quotes change state (e.g., Unpaid → Paid → Issued).
-	//
-	// Use `recv()` on the returned `ActiveSubscription` to receive updates as
-	// `NotificationPayload::MintQuoteUpdate`.
-	//
-	// All quote IDs must belong to the same payment method.
-	//
-	// # Arguments
-	// * `quote_ids` - The IDs of the mint quotes to monitor
-	// * `payment_method` - The payment method of the quotes
-	SubscribeMintQuoteState(quoteIds []string, paymentMethod PaymentMethod) (*ActiveSubscription, error)
 	// Swap proofs
 	Swap(amount *Amount, amountSplitTarget SplitTarget, inputProofs []Proof, spendingConditions *SpendingConditions, includeFees bool) (*[]Proof, error)
 	// Get total balance
@@ -5620,51 +5443,6 @@ func (_self *Wallet) CheckMintQuote(quoteId string) (MintQuote, error) {
 			return FfiConverterMintQuoteINSTANCE.Lift(ffi)
 		},
 		C.uniffi_cdk_ffi_fn_method_wallet_check_mint_quote(
-			_pointer, FfiConverterStringINSTANCE.Lower(quoteId)),
-		// pollFn
-		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
-		},
-		// freeFn
-		func(handle C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_free_rust_buffer(handle)
-		},
-	)
-
-	if err == nil {
-		return res, nil
-	}
-
-	return res, err
-}
-
-// Check a mint quote status from the mint.
-//
-// Calls `GET /v1/mint/quote/{method}/{quote_id}` per NUT-04.
-// Updates local store with current state from mint.
-// If there was a crashed mid-mint (pending saga), attempts to complete it.
-// Does NOT mint tokens directly - use mint() for that.
-//
-// **Note:** The mint quote must be known to the wallet (stored locally) for this
-// function to work. If the quote is not stored locally, use `fetch_mint_quote`
-// instead.
-func (_self *Wallet) CheckMintQuoteStatus(quoteId string) (MintQuote, error) {
-	_pointer := _self.ffiObject.incrementPointer("*Wallet")
-	defer _self.ffiObject.decrementPointer()
-	res, err := uniffiRustCallAsync[FfiError](
-		FfiConverterFfiErrorINSTANCE,
-		// completeFn
-		func(handle C.uint64_t, status *C.RustCallStatus) RustBufferI {
-			res := C.ffi_cdk_ffi_rust_future_complete_rust_buffer(handle, status)
-			return GoRustBuffer{
-				inner: res,
-			}
-		},
-		// liftFn
-		func(ffi RustBufferI) MintQuote {
-			return FfiConverterMintQuoteINSTANCE.Lift(ffi)
-		},
-		C.uniffi_cdk_ffi_fn_method_wallet_check_mint_quote_status(
 			_pointer, FfiConverterStringINSTANCE.Lower(quoteId)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
@@ -6162,12 +5940,9 @@ func (_self *Wallet) LoadMintInfo() (MintInfo, error) {
 
 // Get a quote for a BIP353 melt
 //
-// This method resolves a BIP353 address (e.g., "alice@example.com") to a Bitcoin
-// payment instruction, requires a BOLT12 offer, and then creates a melt quote for it.
-//
-// The `network` parameter controls which on-chain address prefixes are accepted
-// in the resolved URI.
-func (_self *Wallet) MeltBip353Quote(bip353Address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error) {
+// This method resolves a BIP353 address (e.g., "alice@example.com") to a Lightning offer
+// and then creates a melt quote for that offer.
+func (_self *Wallet) MeltBip353Quote(bip353Address string, amountMsat Amount) (MeltQuote, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Wallet")
 	defer _self.ffiObject.decrementPointer()
 	res, err := uniffiRustCallAsync[FfiError](
@@ -6184,7 +5959,7 @@ func (_self *Wallet) MeltBip353Quote(bip353Address string, amountMsat Amount, ne
 			return FfiConverterMeltQuoteINSTANCE.Lift(ffi)
 		},
 		C.uniffi_cdk_ffi_fn_method_wallet_melt_bip353_quote(
-			_pointer, FfiConverterStringINSTANCE.Lower(bip353Address), FfiConverterAmountINSTANCE.Lower(amountMsat), FfiConverterBitcoinNetworkINSTANCE.Lower(network)),
+			_pointer, FfiConverterStringINSTANCE.Lower(bip353Address), FfiConverterAmountINSTANCE.Lower(amountMsat)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
@@ -6208,13 +5983,10 @@ func (_self *Wallet) MeltBip353Quote(bip353Address string, amountMsat Amount, ne
 // or a Lightning address. It intelligently determines which to try based on mint support:
 //
 // 1. If the mint supports Bolt12, it tries BIP353 first
-// 2. Falls back to Lightning address only if BIP353 resolution fails
-// 3. If BIP353 resolves but has no usable BOLT12 offer, it does NOT fall back
+// 2. Falls back to Lightning address only if BIP353 DNS resolution fails
+// 3. If BIP353 resolves but fails at the mint, it does NOT fall back to Lightning address
 // 4. If the mint doesn't support Bolt12, it tries Lightning address directly
-//
-// The `network` parameter is forwarded to the BIP353 resolver for on-chain address
-// validation in the resolved URI.
-func (_self *Wallet) MeltHumanReadable(address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error) {
+func (_self *Wallet) MeltHumanReadable(address string, amountMsat Amount) (MeltQuote, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Wallet")
 	defer _self.ffiObject.decrementPointer()
 	res, err := uniffiRustCallAsync[FfiError](
@@ -6231,47 +6003,7 @@ func (_self *Wallet) MeltHumanReadable(address string, amountMsat Amount, networ
 			return FfiConverterMeltQuoteINSTANCE.Lift(ffi)
 		},
 		C.uniffi_cdk_ffi_fn_method_wallet_melt_human_readable(
-			_pointer, FfiConverterStringINSTANCE.Lower(address), FfiConverterAmountINSTANCE.Lower(amountMsat), FfiConverterBitcoinNetworkINSTANCE.Lower(network)),
-		// pollFn
-		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
-		},
-		// freeFn
-		func(handle C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_free_rust_buffer(handle)
-		},
-	)
-
-	if err == nil {
-		return res, nil
-	}
-
-	return res, err
-}
-
-// Get a quote for a human-readable address melt
-//
-// Accepts a human-readable address that could be either a BIP353 address
-// or a Lightning address. Tries BIP353 first if mint supports Bolt12,
-// falls back to Lightning address.
-func (_self *Wallet) MeltHumanReadableQuote(address string, amountMsat Amount, network BitcoinNetwork) (MeltQuote, error) {
-	_pointer := _self.ffiObject.incrementPointer("*Wallet")
-	defer _self.ffiObject.decrementPointer()
-	res, err := uniffiRustCallAsync[FfiError](
-		FfiConverterFfiErrorINSTANCE,
-		// completeFn
-		func(handle C.uint64_t, status *C.RustCallStatus) RustBufferI {
-			res := C.ffi_cdk_ffi_rust_future_complete_rust_buffer(handle, status)
-			return GoRustBuffer{
-				inner: res,
-			}
-		},
-		// liftFn
-		func(ffi RustBufferI) MeltQuote {
-			return FfiConverterMeltQuoteINSTANCE.Lift(ffi)
-		},
-		C.uniffi_cdk_ffi_fn_method_wallet_melt_human_readable_quote(
-			_pointer, FfiConverterStringINSTANCE.Lower(address), FfiConverterAmountINSTANCE.Lower(amountMsat), FfiConverterBitcoinNetworkINSTANCE.Lower(network)),
+			_pointer, FfiConverterStringINSTANCE.Lower(address), FfiConverterAmountINSTANCE.Lower(amountMsat)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
@@ -7039,52 +6771,6 @@ func (_self *Wallet) Subscribe(params SubscribeParams) (*ActiveSubscription, err
 		},
 		C.uniffi_cdk_ffi_fn_method_wallet_subscribe(
 			_pointer, FfiConverterSubscribeParamsINSTANCE.Lower(params)),
-		// pollFn
-		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_poll_pointer(handle, continuation, data)
-		},
-		// freeFn
-		func(handle C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_free_pointer(handle)
-		},
-	)
-
-	if err == nil {
-		return res, nil
-	}
-
-	return res, err
-}
-
-// Subscribe to mint quote state updates
-//
-// Convenience method that creates a subscription to receive notifications
-// when any of the given mint quotes change state (e.g., Unpaid → Paid → Issued).
-//
-// Use `recv()` on the returned `ActiveSubscription` to receive updates as
-// `NotificationPayload::MintQuoteUpdate`.
-//
-// All quote IDs must belong to the same payment method.
-//
-// # Arguments
-// * `quote_ids` - The IDs of the mint quotes to monitor
-// * `payment_method` - The payment method of the quotes
-func (_self *Wallet) SubscribeMintQuoteState(quoteIds []string, paymentMethod PaymentMethod) (*ActiveSubscription, error) {
-	_pointer := _self.ffiObject.incrementPointer("*Wallet")
-	defer _self.ffiObject.decrementPointer()
-	res, err := uniffiRustCallAsync[FfiError](
-		FfiConverterFfiErrorINSTANCE,
-		// completeFn
-		func(handle C.uint64_t, status *C.RustCallStatus) unsafe.Pointer {
-			res := C.ffi_cdk_ffi_rust_future_complete_pointer(handle, status)
-			return res
-		},
-		// liftFn
-		func(ffi unsafe.Pointer) *ActiveSubscription {
-			return FfiConverterActiveSubscriptionINSTANCE.Lift(ffi)
-		},
-		C.uniffi_cdk_ffi_fn_method_wallet_subscribe_mint_quote_state(
-			_pointer, FfiConverterSequenceStringINSTANCE.Lower(quoteIds), FfiConverterPaymentMethodINSTANCE.Lower(paymentMethod)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_cdk_ffi_rust_future_poll_pointer(handle, continuation, data)
@@ -16601,8 +16287,6 @@ func (_ FfiDestroyerMeltMethodSettings) Destroy(value MeltMethodSettings) {
 type MeltQuote struct {
 	// Quote ID
 	Id string
-	// Mint URL
-	MintUrl *MintUrl
 	// Quote amount
 	Amount Amount
 	// Currency unit
@@ -16627,7 +16311,6 @@ type MeltQuote struct {
 
 func (r *MeltQuote) Destroy() {
 	FfiDestroyerString{}.Destroy(r.Id)
-	FfiDestroyerOptionalMintUrl{}.Destroy(r.MintUrl)
 	FfiDestroyerAmount{}.Destroy(r.Amount)
 	FfiDestroyerCurrencyUnit{}.Destroy(r.Unit)
 	FfiDestroyerString{}.Destroy(r.Request)
@@ -16651,7 +16334,6 @@ func (c FfiConverterMeltQuote) Lift(rb RustBufferI) MeltQuote {
 func (c FfiConverterMeltQuote) Read(reader io.Reader) MeltQuote {
 	return MeltQuote{
 		FfiConverterStringINSTANCE.Read(reader),
-		FfiConverterOptionalMintUrlINSTANCE.Read(reader),
 		FfiConverterAmountINSTANCE.Read(reader),
 		FfiConverterCurrencyUnitINSTANCE.Read(reader),
 		FfiConverterStringINSTANCE.Read(reader),
@@ -16675,7 +16357,6 @@ func (c FfiConverterMeltQuote) LowerExternal(value MeltQuote) ExternalCRustBuffe
 
 func (c FfiConverterMeltQuote) Write(writer io.Writer, value MeltQuote) {
 	FfiConverterStringINSTANCE.Write(writer, value.Id)
-	FfiConverterOptionalMintUrlINSTANCE.Write(writer, value.MintUrl)
 	FfiConverterAmountINSTANCE.Write(writer, value.Amount)
 	FfiConverterCurrencyUnitINSTANCE.Write(writer, value.Unit)
 	FfiConverterStringINSTANCE.Write(writer, value.Request)
@@ -17640,53 +17321,6 @@ func (_ FfiDestroyerNut05Settings) Destroy(value Nut05Settings) {
 	value.Destroy()
 }
 
-// FFI-compatible Nut29Settings (NUT-29)
-type Nut29Settings struct {
-	// Maximum number of quotes allowed in a single batch
-	MaxBatchSize *uint64
-	// Supported payment methods for batch minting
-	Methods *[]string
-}
-
-func (r *Nut29Settings) Destroy() {
-	FfiDestroyerOptionalUint64{}.Destroy(r.MaxBatchSize)
-	FfiDestroyerOptionalSequenceString{}.Destroy(r.Methods)
-}
-
-type FfiConverterNut29Settings struct{}
-
-var FfiConverterNut29SettingsINSTANCE = FfiConverterNut29Settings{}
-
-func (c FfiConverterNut29Settings) Lift(rb RustBufferI) Nut29Settings {
-	return LiftFromRustBuffer[Nut29Settings](c, rb)
-}
-
-func (c FfiConverterNut29Settings) Read(reader io.Reader) Nut29Settings {
-	return Nut29Settings{
-		FfiConverterOptionalUint64INSTANCE.Read(reader),
-		FfiConverterOptionalSequenceStringINSTANCE.Read(reader),
-	}
-}
-
-func (c FfiConverterNut29Settings) Lower(value Nut29Settings) C.RustBuffer {
-	return LowerIntoRustBuffer[Nut29Settings](c, value)
-}
-
-func (c FfiConverterNut29Settings) LowerExternal(value Nut29Settings) ExternalCRustBuffer {
-	return RustBufferFromC(LowerIntoRustBuffer[Nut29Settings](c, value))
-}
-
-func (c FfiConverterNut29Settings) Write(writer io.Writer, value Nut29Settings) {
-	FfiConverterOptionalUint64INSTANCE.Write(writer, value.MaxBatchSize)
-	FfiConverterOptionalSequenceStringINSTANCE.Write(writer, value.Methods)
-}
-
-type FfiDestroyerNut29Settings struct{}
-
-func (_ FfiDestroyerNut29Settings) Destroy(value Nut29Settings) {
-	value.Destroy()
-}
-
 // FFI-compatible Nuts settings (extended to include NUT-04 and NUT-05 settings)
 type Nuts struct {
 	// NUT04 Settings
@@ -17713,8 +17347,6 @@ type Nuts struct {
 	Nut21 *ClearAuthSettings
 	// NUT22 Settings - Blind authentication
 	Nut22 *BlindAuthSettings
-	// NUT29 Settings - Batch minting
-	Nut29 Nut29Settings
 	// Supported currency units for minting
 	MintUnits []CurrencyUnit
 	// Supported currency units for melting
@@ -17734,7 +17366,6 @@ func (r *Nuts) Destroy() {
 	FfiDestroyerBool{}.Destroy(r.Nut20Supported)
 	FfiDestroyerOptionalClearAuthSettings{}.Destroy(r.Nut21)
 	FfiDestroyerOptionalBlindAuthSettings{}.Destroy(r.Nut22)
-	FfiDestroyerNut29Settings{}.Destroy(r.Nut29)
 	FfiDestroyerSequenceCurrencyUnit{}.Destroy(r.MintUnits)
 	FfiDestroyerSequenceCurrencyUnit{}.Destroy(r.MeltUnits)
 }
@@ -17761,7 +17392,6 @@ func (c FfiConverterNuts) Read(reader io.Reader) Nuts {
 		FfiConverterBoolINSTANCE.Read(reader),
 		FfiConverterOptionalClearAuthSettingsINSTANCE.Read(reader),
 		FfiConverterOptionalBlindAuthSettingsINSTANCE.Read(reader),
-		FfiConverterNut29SettingsINSTANCE.Read(reader),
 		FfiConverterSequenceCurrencyUnitINSTANCE.Read(reader),
 		FfiConverterSequenceCurrencyUnitINSTANCE.Read(reader),
 	}
@@ -17788,7 +17418,6 @@ func (c FfiConverterNuts) Write(writer io.Writer, value Nuts) {
 	FfiConverterBoolINSTANCE.Write(writer, value.Nut20Supported)
 	FfiConverterOptionalClearAuthSettingsINSTANCE.Write(writer, value.Nut21)
 	FfiConverterOptionalBlindAuthSettingsINSTANCE.Write(writer, value.Nut22)
-	FfiConverterNut29SettingsINSTANCE.Write(writer, value.Nut29)
 	FfiConverterSequenceCurrencyUnitINSTANCE.Write(writer, value.MintUnits)
 	FfiConverterSequenceCurrencyUnitINSTANCE.Write(writer, value.MeltUnits)
 }
@@ -17796,121 +17425,6 @@ func (c FfiConverterNuts) Write(writer io.Writer, value Nuts) {
 type FfiDestroyerNuts struct{}
 
 func (_ FfiDestroyerNuts) Destroy(value Nuts) {
-	value.Destroy()
-}
-
-// A parsed BIP 321 payment instruction containing all payment methods found.
-//
-// After parsing, inspect the lists to determine which payment methods are
-// available and choose the best one for your wallet. A single URI can contain
-// multiple methods (e.g. cashu + BOLT11 + on-chain) to give the payer options.
-//
-// # Examples
-//
-// ```text
-// // Parse a BIP 321 URI that bundles cashu, BOLT11, and an on-chain address
-// val parsed = parseBip321PaymentInstruction(
-// "bitcoin:bc1qar0s...?creq=CREQB1...&lightning=lnbc100n1p..."
-// )
-//
-// // Check which payment methods are available and pick one
-// when {
-// parsed.cashuRequests.isNotEmpty() -> {
-// // Prefer ecash: instant settlement, zero fees
-// val request = parsed.cashuRequests.first()
-// val id = request.paymentId()         // e.g. "b7a90176"
-// val amount = request.amount()         // e.g. Amount(10)
-// val unit = request.unit()             // e.g. CurrencyUnit.Sat
-// val mints = request.mints()           // acceptable mint URLs
-// val transports = request.transports() // how to deliver proofs
-// }
-// parsed.bolt11Invoices.isNotEmpty() -> {
-// // Fall back to Lightning BOLT11
-// val invoice = parsed.bolt11Invoices.first()
-// }
-// parsed.bolt12Offers.isNotEmpty() -> {
-// // Fall back to Lightning BOLT12
-// val offer = parsed.bolt12Offers.first()
-// }
-// parsed.onchainAddresses.isNotEmpty() -> {
-// // Last resort: on-chain payment
-// val address = parsed.onchainAddresses.first()
-// }
-// }
-//
-// // Amount info
-// val msats = parsed.amountMsats           // fixed amount in msats, or null
-// val flexible = parsed.isConfigurableAmount // true if payer chooses amount
-// val desc = parsed.description             // URI label/message, or null
-// ```
-type ParsedPaymentInstruction struct {
-	// Cashu NUT-26 payment requests.
-	CashuRequests []*PaymentRequest
-	// BOLT11 invoice strings.
-	Bolt11Invoices []string
-	// BOLT12 offer strings.
-	Bolt12Offers []string
-	// On-chain bitcoin addresses.
-	OnchainAddresses []string
-	// Description / label / message from the URI.
-	Description *string
-	// Amount in millisatoshis (if a fixed-amount instruction).
-	AmountMsats *uint64
-	// Whether the amount is configurable (vs fixed).
-	IsConfigurableAmount bool
-}
-
-func (r *ParsedPaymentInstruction) Destroy() {
-	FfiDestroyerSequencePaymentRequest{}.Destroy(r.CashuRequests)
-	FfiDestroyerSequenceString{}.Destroy(r.Bolt11Invoices)
-	FfiDestroyerSequenceString{}.Destroy(r.Bolt12Offers)
-	FfiDestroyerSequenceString{}.Destroy(r.OnchainAddresses)
-	FfiDestroyerOptionalString{}.Destroy(r.Description)
-	FfiDestroyerOptionalUint64{}.Destroy(r.AmountMsats)
-	FfiDestroyerBool{}.Destroy(r.IsConfigurableAmount)
-}
-
-type FfiConverterParsedPaymentInstruction struct{}
-
-var FfiConverterParsedPaymentInstructionINSTANCE = FfiConverterParsedPaymentInstruction{}
-
-func (c FfiConverterParsedPaymentInstruction) Lift(rb RustBufferI) ParsedPaymentInstruction {
-	return LiftFromRustBuffer[ParsedPaymentInstruction](c, rb)
-}
-
-func (c FfiConverterParsedPaymentInstruction) Read(reader io.Reader) ParsedPaymentInstruction {
-	return ParsedPaymentInstruction{
-		FfiConverterSequencePaymentRequestINSTANCE.Read(reader),
-		FfiConverterSequenceStringINSTANCE.Read(reader),
-		FfiConverterSequenceStringINSTANCE.Read(reader),
-		FfiConverterSequenceStringINSTANCE.Read(reader),
-		FfiConverterOptionalStringINSTANCE.Read(reader),
-		FfiConverterOptionalUint64INSTANCE.Read(reader),
-		FfiConverterBoolINSTANCE.Read(reader),
-	}
-}
-
-func (c FfiConverterParsedPaymentInstruction) Lower(value ParsedPaymentInstruction) C.RustBuffer {
-	return LowerIntoRustBuffer[ParsedPaymentInstruction](c, value)
-}
-
-func (c FfiConverterParsedPaymentInstruction) LowerExternal(value ParsedPaymentInstruction) ExternalCRustBuffer {
-	return RustBufferFromC(LowerIntoRustBuffer[ParsedPaymentInstruction](c, value))
-}
-
-func (c FfiConverterParsedPaymentInstruction) Write(writer io.Writer, value ParsedPaymentInstruction) {
-	FfiConverterSequencePaymentRequestINSTANCE.Write(writer, value.CashuRequests)
-	FfiConverterSequenceStringINSTANCE.Write(writer, value.Bolt11Invoices)
-	FfiConverterSequenceStringINSTANCE.Write(writer, value.Bolt12Offers)
-	FfiConverterSequenceStringINSTANCE.Write(writer, value.OnchainAddresses)
-	FfiConverterOptionalStringINSTANCE.Write(writer, value.Description)
-	FfiConverterOptionalUint64INSTANCE.Write(writer, value.AmountMsats)
-	FfiConverterBoolINSTANCE.Write(writer, value.IsConfigurableAmount)
-}
-
-type FfiDestroyerParsedPaymentInstruction struct{}
-
-func (_ FfiDestroyerParsedPaymentInstruction) Destroy(value ParsedPaymentInstruction) {
 	value.Destroy()
 }
 
@@ -17928,8 +17442,6 @@ type Proof struct {
 	Witness *Witness
 	// Optional DLEQ proof
 	Dleq *ProofDleq
-	// Optional P2BK Ephemeral Public Key (NUT-28)
-	P2pkE *string
 }
 
 func (r *Proof) Destroy() {
@@ -17939,7 +17451,6 @@ func (r *Proof) Destroy() {
 	FfiDestroyerString{}.Destroy(r.KeysetId)
 	FfiDestroyerOptionalWitness{}.Destroy(r.Witness)
 	FfiDestroyerOptionalProofDleq{}.Destroy(r.Dleq)
-	FfiDestroyerOptionalString{}.Destroy(r.P2pkE)
 }
 
 type FfiConverterProof struct{}
@@ -17958,7 +17469,6 @@ func (c FfiConverterProof) Read(reader io.Reader) Proof {
 		FfiConverterStringINSTANCE.Read(reader),
 		FfiConverterOptionalWitnessINSTANCE.Read(reader),
 		FfiConverterOptionalProofDleqINSTANCE.Read(reader),
-		FfiConverterOptionalStringINSTANCE.Read(reader),
 	}
 }
 
@@ -17977,7 +17487,6 @@ func (c FfiConverterProof) Write(writer io.Writer, value Proof) {
 	FfiConverterStringINSTANCE.Write(writer, value.KeysetId)
 	FfiConverterOptionalWitnessINSTANCE.Write(writer, value.Witness)
 	FfiConverterOptionalProofDleqINSTANCE.Write(writer, value.Dleq)
-	FfiConverterOptionalStringINSTANCE.Write(writer, value.P2pkE)
 }
 
 type FfiDestroyerProof struct{}
@@ -18557,7 +18066,6 @@ type SendOptions struct {
 	SendKind SendKind
 	// Include fee
 	IncludeFee bool
-	UseP2bk    bool
 	// Maximum number of proofs to include in the token
 	MaxProofs *uint32
 	// Metadata
@@ -18570,7 +18078,6 @@ func (r *SendOptions) Destroy() {
 	FfiDestroyerSplitTarget{}.Destroy(r.AmountSplitTarget)
 	FfiDestroyerSendKind{}.Destroy(r.SendKind)
 	FfiDestroyerBool{}.Destroy(r.IncludeFee)
-	FfiDestroyerBool{}.Destroy(r.UseP2bk)
 	FfiDestroyerOptionalUint32{}.Destroy(r.MaxProofs)
 	FfiDestroyerMapStringString{}.Destroy(r.Metadata)
 }
@@ -18589,7 +18096,6 @@ func (c FfiConverterSendOptions) Read(reader io.Reader) SendOptions {
 		FfiConverterOptionalSpendingConditionsINSTANCE.Read(reader),
 		FfiConverterSplitTargetINSTANCE.Read(reader),
 		FfiConverterSendKindINSTANCE.Read(reader),
-		FfiConverterBoolINSTANCE.Read(reader),
 		FfiConverterBoolINSTANCE.Read(reader),
 		FfiConverterOptionalUint32INSTANCE.Read(reader),
 		FfiConverterMapStringStringINSTANCE.Read(reader),
@@ -18610,7 +18116,6 @@ func (c FfiConverterSendOptions) Write(writer io.Writer, value SendOptions) {
 	FfiConverterSplitTargetINSTANCE.Write(writer, value.AmountSplitTarget)
 	FfiConverterSendKindINSTANCE.Write(writer, value.SendKind)
 	FfiConverterBoolINSTANCE.Write(writer, value.IncludeFee)
-	FfiConverterBoolINSTANCE.Write(writer, value.UseP2bk)
 	FfiConverterOptionalUint32INSTANCE.Write(writer, value.MaxProofs)
 	FfiConverterMapStringStringINSTANCE.Write(writer, value.Metadata)
 }
@@ -18944,14 +18449,14 @@ type Transport struct {
 	TransportType TransportType
 	// Target (e.g., nprofile for Nostr, URL for HTTP)
 	Target string
-	// Tags
-	Tags [][]string
+	// Optional tags
+	Tags *[][]string
 }
 
 func (r *Transport) Destroy() {
 	FfiDestroyerTransportType{}.Destroy(r.TransportType)
 	FfiDestroyerString{}.Destroy(r.Target)
-	FfiDestroyerSequenceSequenceString{}.Destroy(r.Tags)
+	FfiDestroyerOptionalSequenceSequenceString{}.Destroy(r.Tags)
 }
 
 type FfiConverterTransport struct{}
@@ -18966,7 +18471,7 @@ func (c FfiConverterTransport) Read(reader io.Reader) Transport {
 	return Transport{
 		FfiConverterTransportTypeINSTANCE.Read(reader),
 		FfiConverterStringINSTANCE.Read(reader),
-		FfiConverterSequenceSequenceStringINSTANCE.Read(reader),
+		FfiConverterOptionalSequenceSequenceStringINSTANCE.Read(reader),
 	}
 }
 
@@ -18981,7 +18486,7 @@ func (c FfiConverterTransport) LowerExternal(value Transport) ExternalCRustBuffe
 func (c FfiConverterTransport) Write(writer io.Writer, value Transport) {
 	FfiConverterTransportTypeINSTANCE.Write(writer, value.TransportType)
 	FfiConverterStringINSTANCE.Write(writer, value.Target)
-	FfiConverterSequenceSequenceStringINSTANCE.Write(writer, value.Tags)
+	FfiConverterOptionalSequenceSequenceStringINSTANCE.Write(writer, value.Tags)
 }
 
 type FfiDestroyerTransport struct{}
@@ -19076,59 +18581,6 @@ type FfiDestroyerWalletKey struct{}
 
 func (_ FfiDestroyerWalletKey) Destroy(value WalletKey) {
 	value.Destroy()
-}
-
-// Bitcoin network for on-chain address validation.
-//
-// This determines which address prefixes are accepted when parsing a BIP 321
-// `bitcoin:` URI that contains an on-chain component.
-//
-// ```text
-// val parsed = parseBip321PaymentInstruction(
-// "bitcoin:bc1qar0s...?creq=CREQB1...",
-// BitcoinNetwork.BITCOIN  // mainnet addresses only
-// )
-// ```
-type BitcoinNetwork uint
-
-const (
-	// Bitcoin mainnet (addresses start with `bc1`, `1`, or `3`).
-	BitcoinNetworkBitcoin BitcoinNetwork = 1
-	// Bitcoin testnet (addresses start with `tb1`, `m`, or `n`).
-	BitcoinNetworkTestnet BitcoinNetwork = 2
-	// Bitcoin signet (addresses start with `tb1`).
-	BitcoinNetworkSignet BitcoinNetwork = 3
-	// Bitcoin regtest (addresses start with `bcrt1`).
-	BitcoinNetworkRegtest BitcoinNetwork = 4
-)
-
-type FfiConverterBitcoinNetwork struct{}
-
-var FfiConverterBitcoinNetworkINSTANCE = FfiConverterBitcoinNetwork{}
-
-func (c FfiConverterBitcoinNetwork) Lift(rb RustBufferI) BitcoinNetwork {
-	return LiftFromRustBuffer[BitcoinNetwork](c, rb)
-}
-
-func (c FfiConverterBitcoinNetwork) Lower(value BitcoinNetwork) C.RustBuffer {
-	return LowerIntoRustBuffer[BitcoinNetwork](c, value)
-}
-
-func (c FfiConverterBitcoinNetwork) LowerExternal(value BitcoinNetwork) ExternalCRustBuffer {
-	return RustBufferFromC(LowerIntoRustBuffer[BitcoinNetwork](c, value))
-}
-func (FfiConverterBitcoinNetwork) Read(reader io.Reader) BitcoinNetwork {
-	id := readInt32(reader)
-	return BitcoinNetwork(id)
-}
-
-func (FfiConverterBitcoinNetwork) Write(writer io.Writer, value BitcoinNetwork) {
-	writeInt32(writer, int32(value))
-}
-
-type FfiDestroyerBitcoinNetwork struct{}
-
-func (_ FfiDestroyerBitcoinNetwork) Destroy(value BitcoinNetwork) {
 }
 
 // FFI-compatible Currency Unit
@@ -21653,6 +21105,47 @@ func (_ FfiDestroyerOptionalSequenceSpendingConditions) Destroy(value *[]Spendin
 	}
 }
 
+type FfiConverterOptionalSequenceSequenceString struct{}
+
+var FfiConverterOptionalSequenceSequenceStringINSTANCE = FfiConverterOptionalSequenceSequenceString{}
+
+func (c FfiConverterOptionalSequenceSequenceString) Lift(rb RustBufferI) *[][]string {
+	return LiftFromRustBuffer[*[][]string](c, rb)
+}
+
+func (_ FfiConverterOptionalSequenceSequenceString) Read(reader io.Reader) *[][]string {
+	if readInt8(reader) == 0 {
+		return nil
+	}
+	temp := FfiConverterSequenceSequenceStringINSTANCE.Read(reader)
+	return &temp
+}
+
+func (c FfiConverterOptionalSequenceSequenceString) Lower(value *[][]string) C.RustBuffer {
+	return LowerIntoRustBuffer[*[][]string](c, value)
+}
+
+func (c FfiConverterOptionalSequenceSequenceString) LowerExternal(value *[][]string) ExternalCRustBuffer {
+	return RustBufferFromC(LowerIntoRustBuffer[*[][]string](c, value))
+}
+
+func (_ FfiConverterOptionalSequenceSequenceString) Write(writer io.Writer, value *[][]string) {
+	if value == nil {
+		writeInt8(writer, 0)
+	} else {
+		writeInt8(writer, 1)
+		FfiConverterSequenceSequenceStringINSTANCE.Write(writer, *value)
+	}
+}
+
+type FfiDestroyerOptionalSequenceSequenceString struct{}
+
+func (_ FfiDestroyerOptionalSequenceSequenceString) Destroy(value *[][]string) {
+	if value != nil {
+		FfiDestroyerSequenceSequenceString{}.Destroy(*value)
+	}
+}
+
 type FfiConverterSequenceUint64 struct{}
 
 var FfiConverterSequenceUint64INSTANCE = FfiConverterSequenceUint64{}
@@ -21791,53 +21284,6 @@ type FfiDestroyerSequenceString struct{}
 func (FfiDestroyerSequenceString) Destroy(sequence []string) {
 	for _, value := range sequence {
 		FfiDestroyerString{}.Destroy(value)
-	}
-}
-
-type FfiConverterSequencePaymentRequest struct{}
-
-var FfiConverterSequencePaymentRequestINSTANCE = FfiConverterSequencePaymentRequest{}
-
-func (c FfiConverterSequencePaymentRequest) Lift(rb RustBufferI) []*PaymentRequest {
-	return LiftFromRustBuffer[[]*PaymentRequest](c, rb)
-}
-
-func (c FfiConverterSequencePaymentRequest) Read(reader io.Reader) []*PaymentRequest {
-	length := readInt32(reader)
-	if length == 0 {
-		return nil
-	}
-	result := make([]*PaymentRequest, 0, length)
-	for i := int32(0); i < length; i++ {
-		result = append(result, FfiConverterPaymentRequestINSTANCE.Read(reader))
-	}
-	return result
-}
-
-func (c FfiConverterSequencePaymentRequest) Lower(value []*PaymentRequest) C.RustBuffer {
-	return LowerIntoRustBuffer[[]*PaymentRequest](c, value)
-}
-
-func (c FfiConverterSequencePaymentRequest) LowerExternal(value []*PaymentRequest) ExternalCRustBuffer {
-	return RustBufferFromC(LowerIntoRustBuffer[[]*PaymentRequest](c, value))
-}
-
-func (c FfiConverterSequencePaymentRequest) Write(writer io.Writer, value []*PaymentRequest) {
-	if len(value) > math.MaxInt32 {
-		panic("[]*PaymentRequest is too large to fit into Int32")
-	}
-
-	writeInt32(writer, int32(len(value)))
-	for _, item := range value {
-		FfiConverterPaymentRequestINSTANCE.Write(writer, item)
-	}
-}
-
-type FfiDestroyerSequencePaymentRequest struct{}
-
-func (FfiDestroyerSequencePaymentRequest) Destroy(sequence []*PaymentRequest) {
-	for _, value := range sequence {
-		FfiDestroyerPaymentRequest{}.Destroy(value)
 	}
 }
 
@@ -23177,27 +22623,6 @@ func cdkffi_uniffiFreeGorutine(data C.uint64_t) {
 	guard <- struct{}{}
 }
 
-// Create a BIP 321 `bitcoin:` URI from raw string components.
-//
-// Combines optional `creq`, `lightning`, and `lno` query parameters into a
-// single URI without requiring a `PaymentRequest` object.
-//
-// ```text
-// val uri = createBip321Uri(
-// creq = "CREQB1...",
-// bolt11 = "lnbc100n1p...",
-// bolt12 = "lno1qgsq..."
-// )
-// // => "bitcoin:?creq=CREQB1...&lightning=lnbc100n1p...&lno=lno1qgsq..."
-// ```
-func CreateBip321Uri(creq *string, bolt11 *string, bolt12 *string) string {
-	return FfiConverterStringINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
-		return GoRustBuffer{
-			inner: C.uniffi_cdk_ffi_fn_func_create_bip321_uri(FfiConverterOptionalStringINSTANCE.Lower(creq), FfiConverterOptionalStringINSTANCE.Lower(bolt11), FfiConverterOptionalStringINSTANCE.Lower(bolt12), _uniffiStatus),
-		}
-	}))
-}
-
 // Factory helpers returning a CDK wallet database behind the FFI trait
 func CreateWalletDb(backend WalletDbBackend) (WalletDatabase, error) {
 	_uniffiRV, _uniffiErr := rustCallWithError[FfiError](FfiConverterFfiError{}, func(_uniffiStatus *C.RustCallStatus) unsafe.Pointer {
@@ -24018,51 +23443,6 @@ func NpubcashQuoteToMintQuote(quote NpubCashQuote) MintQuote {
 	}))
 }
 
-// Parse a BIP 321 `bitcoin:` URI or standalone payment instruction string,
-// validating on-chain addresses against the given [`bitcoin::Network`].
-//
-// Returns a [`ParsedPaymentInstruction`] from a BIP 321 URI or standalone
-// payment string (Cashu, BOLT11, BOLT12, or on-chain address).
-//
-// ```text
-// val parsed = parseBip321PaymentInstruction(
-// "bitcoin:?creq=CREQB1...&lightning=lnbc100n1p...",
-// Network.BITCOIN
-// )
-// // parsed.cashuRequests and parsed.bolt11Invoices are populated when present
-// ```
-func ParseBip321PaymentInstruction(instruction string, network BitcoinNetwork) (ParsedPaymentInstruction, error) {
-	res, err := uniffiRustCallAsync[FfiError](
-		FfiConverterFfiErrorINSTANCE,
-		// completeFn
-		func(handle C.uint64_t, status *C.RustCallStatus) RustBufferI {
-			res := C.ffi_cdk_ffi_rust_future_complete_rust_buffer(handle, status)
-			return GoRustBuffer{
-				inner: res,
-			}
-		},
-		// liftFn
-		func(ffi RustBufferI) ParsedPaymentInstruction {
-			return FfiConverterParsedPaymentInstructionINSTANCE.Lift(ffi)
-		},
-		C.uniffi_cdk_ffi_fn_func_parse_bip321_payment_instruction(FfiConverterStringINSTANCE.Lower(instruction), FfiConverterBitcoinNetworkINSTANCE.Lower(network)),
-		// pollFn
-		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
-		},
-		// freeFn
-		func(handle C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_free_rust_buffer(handle)
-		},
-	)
-
-	if err == nil {
-		return res, nil
-	}
-
-	return res, err
-}
-
 // Check if proof has DLEQ proof
 func ProofHasDleq(proof Proof) bool {
 	return FfiConverterBoolINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.int8_t {
@@ -24138,46 +23518,6 @@ func ProofsTotalAmount(proofs []Proof) (Amount, error) {
 	} else {
 		return FfiConverterAmountINSTANCE.Lift(_uniffiRV), nil
 	}
-}
-
-// Resolve a BIP353 human-readable address into a parsed payment instruction.
-//
-// This uses the wallet's configured connector to resolve the address, then parses the resolved
-// `bitcoin:` URI into a [`ParsedPaymentInstruction`] so callers can inspect the available
-// methods before deciding how to pay or whether a BIP353 melt is possible.
-//
-// The `network` parameter controls which on-chain address prefixes are accepted
-// in the resolved URI.
-func ResolveBip353PaymentInstruction(wallet *Wallet, address string, network BitcoinNetwork) (ParsedPaymentInstruction, error) {
-	res, err := uniffiRustCallAsync[FfiError](
-		FfiConverterFfiErrorINSTANCE,
-		// completeFn
-		func(handle C.uint64_t, status *C.RustCallStatus) RustBufferI {
-			res := C.ffi_cdk_ffi_rust_future_complete_rust_buffer(handle, status)
-			return GoRustBuffer{
-				inner: res,
-			}
-		},
-		// liftFn
-		func(ffi RustBufferI) ParsedPaymentInstruction {
-			return FfiConverterParsedPaymentInstructionINSTANCE.Lift(ffi)
-		},
-		C.uniffi_cdk_ffi_fn_func_resolve_bip353_payment_instruction(FfiConverterWalletINSTANCE.Lower(wallet), FfiConverterStringINSTANCE.Lower(address), FfiConverterBitcoinNetworkINSTANCE.Lower(network)),
-		// pollFn
-		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
-		},
-		// freeFn
-		func(handle C.uint64_t) {
-			C.ffi_cdk_ffi_rust_future_free_rust_buffer(handle)
-		},
-	)
-
-	if err == nil {
-		return res, nil
-	}
-
-	return res, err
 }
 
 // Check if a transaction matches the given filter conditions
