@@ -9,7 +9,7 @@ on:
       cdk_ref:
         description: CDK git ref to build
         required: false
-        default: v0.15.1
+        default: v0.16.0
 
 jobs:
   generate-and-verify:
@@ -26,7 +26,7 @@ jobs:
             platform_key: darwin_arm64
     runs-on: ${{ matrix.os }}
     env:
-      CDK_REF: ${{ github.event.inputs.cdk_ref || 'v0.15.1' }}
+      CDK_REF: ${{ github.event.inputs.cdk_ref || 'v0.16.0' }}
       CARGO_TERM_COLOR: always
     steps:
       - name: Checkout cdk-go

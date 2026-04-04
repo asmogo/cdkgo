@@ -40,7 +40,7 @@ make clean      # rm -rf .work bindings/cdkffi
 
 | Variable               | Default                              | Description                          |
 |------------------------|--------------------------------------|--------------------------------------|
-| `CDK_REF`              | `main`                               | CDK branch, tag, or SHA to build     |
+| `CDK_REF`              | `v0.16.0`                            | CDK branch, tag, or SHA to build     |
 | `CDK_REPO`             | `https://github.com/cashubtc/cdk.git`| CDK source repository                |
 | `UNIFFI_BINDGEN_GO_TAG`| `v0.5.0+v0.29.5`                     | Pinned `uniffi-bindgen-go` version   |
 | `BUILD_PROFILE`        | `release`                            | Rust build profile                   |
