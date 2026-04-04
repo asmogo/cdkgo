@@ -1,3 +1,3 @@
-module github.com/asmogo/cdkgo
+module github.com/cashubtc/cdk-go
 
 go 1.22
