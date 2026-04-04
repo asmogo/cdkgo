@@ -618,280 +618,280 @@ static void call_UniffiCallbackInterfaceWalletDatabaseMethod16(
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD17
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD17
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod17)(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, RustBuffer value, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod17)(uint64_t uniffi_handle, RustBuffer pubkey, RustBuffer derivation_path, uint32_t derivation_index, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod17(
-				UniffiCallbackInterfaceWalletDatabaseMethod17 cb, uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, RustBuffer value, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod17 cb, uint64_t uniffi_handle, RustBuffer pubkey, RustBuffer derivation_path, uint32_t derivation_index, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, primary_namespace, secondary_namespace, key, value, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, pubkey, derivation_path, derivation_index, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD18
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD18
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod18)(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod18)(uint64_t uniffi_handle, RustBuffer pubkey, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod18(
-				UniffiCallbackInterfaceWalletDatabaseMethod18 cb, uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod18 cb, uint64_t uniffi_handle, RustBuffer pubkey, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, primary_namespace, secondary_namespace, key, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, pubkey, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD19
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD19
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod19)(uint64_t uniffi_handle, RustBuffer added, RustBuffer removed_ys, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod19)(uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod19(
-				UniffiCallbackInterfaceWalletDatabaseMethod19 cb, uint64_t uniffi_handle, RustBuffer added, RustBuffer removed_ys, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod19 cb, uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, added, removed_ys, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD20
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD20
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod20)(uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod20)(uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod20(
-				UniffiCallbackInterfaceWalletDatabaseMethod20 cb, uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod20 cb, uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, ys, state, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD21
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD21
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod21)(uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod21)(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, RustBuffer value, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod21(
-				UniffiCallbackInterfaceWalletDatabaseMethod21 cb, uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod21 cb, uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, RustBuffer value, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, transaction, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, primary_namespace, secondary_namespace, key, value, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD22
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD22
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod22)(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod22)(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod22(
-				UniffiCallbackInterfaceWalletDatabaseMethod22 cb, uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod22 cb, uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, transaction_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, primary_namespace, secondary_namespace, key, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD23
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD23
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod23)(uint64_t uniffi_handle, RustBuffer old_mint_url, RustBuffer new_mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod23)(uint64_t uniffi_handle, RustBuffer added, RustBuffer removed_ys, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod23(
-				UniffiCallbackInterfaceWalletDatabaseMethod23 cb, uint64_t uniffi_handle, RustBuffer old_mint_url, RustBuffer new_mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod23 cb, uint64_t uniffi_handle, RustBuffer added, RustBuffer removed_ys, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, old_mint_url, new_mint_url, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, added, removed_ys, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD24
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD24
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod24)(uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod24)(uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod24(
-				UniffiCallbackInterfaceWalletDatabaseMethod24 cb, uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod24 cb, uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, keyset_id, count, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, ys, state, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD25
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD25
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod25)(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer mint_info, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod25)(uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod25(
-				UniffiCallbackInterfaceWalletDatabaseMethod25 cb, uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer mint_info, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod25 cb, uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, mint_url, mint_info, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, transaction, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD26
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD26
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod26)(uint64_t uniffi_handle, RustBuffer mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod26)(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod26(
-				UniffiCallbackInterfaceWalletDatabaseMethod26 cb, uint64_t uniffi_handle, RustBuffer mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod26 cb, uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, mint_url, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, transaction_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD27
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD27
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod27)(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer keysets, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod27)(uint64_t uniffi_handle, RustBuffer old_mint_url, RustBuffer new_mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod27(
-				UniffiCallbackInterfaceWalletDatabaseMethod27 cb, uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer keysets, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod27 cb, uint64_t uniffi_handle, RustBuffer old_mint_url, RustBuffer new_mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, mint_url, keysets, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, old_mint_url, new_mint_url, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD28
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD28
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod28)(uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod28)(uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod28(
-				UniffiCallbackInterfaceWalletDatabaseMethod28 cb, uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod28 cb, uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, quote, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, keyset_id, count, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD29
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD29
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod29)(uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod29)(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer mint_info, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod29(
-				UniffiCallbackInterfaceWalletDatabaseMethod29 cb, uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod29 cb, uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer mint_info, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, quote_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, mint_url, mint_info, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD30
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD30
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod30)(uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod30)(uint64_t uniffi_handle, RustBuffer mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod30(
-				UniffiCallbackInterfaceWalletDatabaseMethod30 cb, uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod30 cb, uint64_t uniffi_handle, RustBuffer mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, quote, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, mint_url, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD31
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD31
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod31)(uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod31)(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer keysets, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod31(
-				UniffiCallbackInterfaceWalletDatabaseMethod31 cb, uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod31 cb, uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer keysets, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, quote_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, mint_url, keysets, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD32
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD32
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod32)(uint64_t uniffi_handle, RustBuffer keyset, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod32)(uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod32(
-				UniffiCallbackInterfaceWalletDatabaseMethod32 cb, uint64_t uniffi_handle, RustBuffer keyset, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod32 cb, uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, keyset, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, quote, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD33
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD33
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod33)(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod33)(uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod33(
-				UniffiCallbackInterfaceWalletDatabaseMethod33 cb, uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod33 cb, uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, quote_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD34
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD34
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod34)(uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod34)(uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod34(
-				UniffiCallbackInterfaceWalletDatabaseMethod34 cb, uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod34 cb, uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, saga_json, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, quote, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD35
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD35
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod35)(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod35)(uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod35(
-				UniffiCallbackInterfaceWalletDatabaseMethod35 cb, uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod35 cb, uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, quote_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD36
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD36
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod36)(uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteI8 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod36)(uint64_t uniffi_handle, RustBuffer keyset, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod36(
-				UniffiCallbackInterfaceWalletDatabaseMethod36 cb, uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteI8 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod36 cb, uint64_t uniffi_handle, RustBuffer keyset, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, saga_json, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, keyset, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
@@ -912,110 +912,166 @@ static void call_UniffiCallbackInterfaceWalletDatabaseMethod37(
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD38
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD38
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod38)(uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod38)(uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod38(
-				UniffiCallbackInterfaceWalletDatabaseMethod38 cb, uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod38 cb, uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, saga_json, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD39
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD39
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod39)(uint64_t uniffi_handle, RustBuffer ys, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod39)(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod39(
-				UniffiCallbackInterfaceWalletDatabaseMethod39 cb, uint64_t uniffi_handle, RustBuffer ys, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod39 cb, uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, ys, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD40
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD40
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod40)(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod40)(uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteI8 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod40(
-				UniffiCallbackInterfaceWalletDatabaseMethod40 cb, uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod40 cb, uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteI8 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, saga_json, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD41
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD41
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod41)(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod41)(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod41(
-				UniffiCallbackInterfaceWalletDatabaseMethod41 cb, uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod41 cb, uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD42
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD42
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod42)(uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod42)(uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod42(
-				UniffiCallbackInterfaceWalletDatabaseMethod42 cb, uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod42 cb, uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, quote_id, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD43
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD43
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod43)(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod43)(uint64_t uniffi_handle, RustBuffer ys, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod43(
-				UniffiCallbackInterfaceWalletDatabaseMethod43 cb, uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod43 cb, uint64_t uniffi_handle, RustBuffer ys, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, ys, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD44
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD44
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod44)(uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod44)(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod44(
-				UniffiCallbackInterfaceWalletDatabaseMethod44 cb, uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod44 cb, uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
-	return cb(uniffi_handle, quote_id, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+	return cb(uniffi_handle, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
 
 
 #endif
 #ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD45
 #define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD45
-typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod45)(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod45)(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
 
 // Making function static works arround:
 // https://github.com/golang/go/issues/11263
 static void call_UniffiCallbackInterfaceWalletDatabaseMethod45(
-				UniffiCallbackInterfaceWalletDatabaseMethod45 cb, uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+				UniffiCallbackInterfaceWalletDatabaseMethod45 cb, uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+{
+	return cb(uniffi_handle, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+}
+
+
+#endif
+#ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD46
+#define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD46
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod46)(uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+
+// Making function static works arround:
+// https://github.com/golang/go/issues/11263
+static void call_UniffiCallbackInterfaceWalletDatabaseMethod46(
+				UniffiCallbackInterfaceWalletDatabaseMethod46 cb, uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+{
+	return cb(uniffi_handle, quote_id, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+}
+
+
+#endif
+#ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD47
+#define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD47
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod47)(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+
+// Making function static works arround:
+// https://github.com/golang/go/issues/11263
+static void call_UniffiCallbackInterfaceWalletDatabaseMethod47(
+				UniffiCallbackInterfaceWalletDatabaseMethod47 cb, uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+{
+	return cb(uniffi_handle, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+}
+
+
+#endif
+#ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD48
+#define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD48
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod48)(uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+
+// Making function static works arround:
+// https://github.com/golang/go/issues/11263
+static void call_UniffiCallbackInterfaceWalletDatabaseMethod48(
+				UniffiCallbackInterfaceWalletDatabaseMethod48 cb, uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
+{
+	return cb(uniffi_handle, quote_id, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
+}
+
+
+#endif
+#ifndef UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD49
+#define UNIFFI_FFIDEF_CALLBACK_INTERFACE_WALLET_DATABASE_METHOD49
+typedef void (*UniffiCallbackInterfaceWalletDatabaseMethod49)(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+
+// Making function static works arround:
+// https://github.com/golang/go/issues/11263
+static void call_UniffiCallbackInterfaceWalletDatabaseMethod49(
+				UniffiCallbackInterfaceWalletDatabaseMethod49 cb, uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return)
 {
 	return cb(uniffi_handle, operation_id, uniffi_future_callback, uniffi_callback_data, uniffi_out_return);
 }
@@ -1042,35 +1098,39 @@ typedef struct UniffiVTableCallbackInterfaceWalletDatabase {
     UniffiCallbackInterfaceWalletDatabaseMethod14 listTransactions;
     UniffiCallbackInterfaceWalletDatabaseMethod15 kvRead;
     UniffiCallbackInterfaceWalletDatabaseMethod16 kvList;
-    UniffiCallbackInterfaceWalletDatabaseMethod17 kvWrite;
-    UniffiCallbackInterfaceWalletDatabaseMethod18 kvRemove;
-    UniffiCallbackInterfaceWalletDatabaseMethod19 updateProofs;
-    UniffiCallbackInterfaceWalletDatabaseMethod20 updateProofsState;
-    UniffiCallbackInterfaceWalletDatabaseMethod21 addTransaction;
-    UniffiCallbackInterfaceWalletDatabaseMethod22 removeTransaction;
-    UniffiCallbackInterfaceWalletDatabaseMethod23 updateMintUrl;
-    UniffiCallbackInterfaceWalletDatabaseMethod24 incrementKeysetCounter;
-    UniffiCallbackInterfaceWalletDatabaseMethod25 addMint;
-    UniffiCallbackInterfaceWalletDatabaseMethod26 removeMint;
-    UniffiCallbackInterfaceWalletDatabaseMethod27 addMintKeysets;
-    UniffiCallbackInterfaceWalletDatabaseMethod28 addMintQuote;
-    UniffiCallbackInterfaceWalletDatabaseMethod29 removeMintQuote;
-    UniffiCallbackInterfaceWalletDatabaseMethod30 addMeltQuote;
-    UniffiCallbackInterfaceWalletDatabaseMethod31 removeMeltQuote;
-    UniffiCallbackInterfaceWalletDatabaseMethod32 addKeys;
-    UniffiCallbackInterfaceWalletDatabaseMethod33 removeKeys;
-    UniffiCallbackInterfaceWalletDatabaseMethod34 addSaga;
-    UniffiCallbackInterfaceWalletDatabaseMethod35 getSaga;
-    UniffiCallbackInterfaceWalletDatabaseMethod36 updateSaga;
-    UniffiCallbackInterfaceWalletDatabaseMethod37 deleteSaga;
-    UniffiCallbackInterfaceWalletDatabaseMethod38 getIncompleteSagas;
-    UniffiCallbackInterfaceWalletDatabaseMethod39 reserveProofs;
-    UniffiCallbackInterfaceWalletDatabaseMethod40 releaseProofs;
-    UniffiCallbackInterfaceWalletDatabaseMethod41 getReservedProofs;
-    UniffiCallbackInterfaceWalletDatabaseMethod42 reserveMeltQuote;
-    UniffiCallbackInterfaceWalletDatabaseMethod43 releaseMeltQuote;
-    UniffiCallbackInterfaceWalletDatabaseMethod44 reserveMintQuote;
-    UniffiCallbackInterfaceWalletDatabaseMethod45 releaseMintQuote;
+    UniffiCallbackInterfaceWalletDatabaseMethod17 addP2pkKey;
+    UniffiCallbackInterfaceWalletDatabaseMethod18 getP2pkKey;
+    UniffiCallbackInterfaceWalletDatabaseMethod19 listP2pkKeys;
+    UniffiCallbackInterfaceWalletDatabaseMethod20 latestP2pk;
+    UniffiCallbackInterfaceWalletDatabaseMethod21 kvWrite;
+    UniffiCallbackInterfaceWalletDatabaseMethod22 kvRemove;
+    UniffiCallbackInterfaceWalletDatabaseMethod23 updateProofs;
+    UniffiCallbackInterfaceWalletDatabaseMethod24 updateProofsState;
+    UniffiCallbackInterfaceWalletDatabaseMethod25 addTransaction;
+    UniffiCallbackInterfaceWalletDatabaseMethod26 removeTransaction;
+    UniffiCallbackInterfaceWalletDatabaseMethod27 updateMintUrl;
+    UniffiCallbackInterfaceWalletDatabaseMethod28 incrementKeysetCounter;
+    UniffiCallbackInterfaceWalletDatabaseMethod29 addMint;
+    UniffiCallbackInterfaceWalletDatabaseMethod30 removeMint;
+    UniffiCallbackInterfaceWalletDatabaseMethod31 addMintKeysets;
+    UniffiCallbackInterfaceWalletDatabaseMethod32 addMintQuote;
+    UniffiCallbackInterfaceWalletDatabaseMethod33 removeMintQuote;
+    UniffiCallbackInterfaceWalletDatabaseMethod34 addMeltQuote;
+    UniffiCallbackInterfaceWalletDatabaseMethod35 removeMeltQuote;
+    UniffiCallbackInterfaceWalletDatabaseMethod36 addKeys;
+    UniffiCallbackInterfaceWalletDatabaseMethod37 removeKeys;
+    UniffiCallbackInterfaceWalletDatabaseMethod38 addSaga;
+    UniffiCallbackInterfaceWalletDatabaseMethod39 getSaga;
+    UniffiCallbackInterfaceWalletDatabaseMethod40 updateSaga;
+    UniffiCallbackInterfaceWalletDatabaseMethod41 deleteSaga;
+    UniffiCallbackInterfaceWalletDatabaseMethod42 getIncompleteSagas;
+    UniffiCallbackInterfaceWalletDatabaseMethod43 reserveProofs;
+    UniffiCallbackInterfaceWalletDatabaseMethod44 releaseProofs;
+    UniffiCallbackInterfaceWalletDatabaseMethod45 getReservedProofs;
+    UniffiCallbackInterfaceWalletDatabaseMethod46 reserveMeltQuote;
+    UniffiCallbackInterfaceWalletDatabaseMethod47 releaseMeltQuote;
+    UniffiCallbackInterfaceWalletDatabaseMethod48 reserveMintQuote;
+    UniffiCallbackInterfaceWalletDatabaseMethod49 releaseMintQuote;
     UniffiCallbackInterfaceFree uniffiFree;
 } UniffiVTableCallbackInterfaceWalletDatabase;
 
@@ -1183,6 +1243,16 @@ RustBuffer uniffi_cdk_ffi_fn_method_paymentrequest_payment_id(void* ptr, RustCal
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_PAYMENTREQUEST_SINGLE_USE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_PAYMENTREQUEST_SINGLE_USE
 RustBuffer uniffi_cdk_ffi_fn_method_paymentrequest_single_use(void* ptr, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_PAYMENTREQUEST_TO_BECH32_STRING
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_PAYMENTREQUEST_TO_BECH32_STRING
+RustBuffer uniffi_cdk_ffi_fn_method_paymentrequest_to_bech32_string(void* ptr, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_PAYMENTREQUEST_TO_BIP321
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_PAYMENTREQUEST_TO_BIP321
+RustBuffer uniffi_cdk_ffi_fn_method_paymentrequest_to_bip321(void* ptr, RustBuffer bolt11, RustBuffer bolt12, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_PAYMENTREQUEST_TO_STRING_ENCODED
@@ -1472,7 +1542,7 @@ void uniffi_cdk_ffi_fn_free_wallet(void* ptr, RustCallStatus *out_status
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CONSTRUCTOR_WALLET_NEW
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CONSTRUCTOR_WALLET_NEW
-void* uniffi_cdk_ffi_fn_constructor_wallet_new(RustBuffer mint_url, RustBuffer unit, RustBuffer mnemonic, void* db, RustBuffer config, RustCallStatus *out_status
+void* uniffi_cdk_ffi_fn_constructor_wallet_new(RustBuffer mint_url, RustBuffer unit, RustBuffer mnemonic, RustBuffer store, RustBuffer config, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CALCULATE_FEE
@@ -1490,6 +1560,11 @@ uint64_t uniffi_cdk_ffi_fn_method_wallet_check_all_pending_proofs(void* ptr
 uint64_t uniffi_cdk_ffi_fn_method_wallet_check_mint_quote(void* ptr, RustBuffer quote_id
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_MINT_QUOTE_STATUS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_MINT_QUOTE_STATUS
+uint64_t uniffi_cdk_ffi_fn_method_wallet_check_mint_quote_status(void* ptr, RustBuffer quote_id
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_PROOFS_SPENT
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_PROOFS_SPENT
 uint64_t uniffi_cdk_ffi_fn_method_wallet_check_proofs_spent(void* ptr, RustBuffer proofs
@@ -1498,6 +1573,11 @@ uint64_t uniffi_cdk_ffi_fn_method_wallet_check_proofs_spent(void* ptr, RustBuffe
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_SEND_STATUS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_CHECK_SEND_STATUS
 uint64_t uniffi_cdk_ffi_fn_method_wallet_check_send_status(void* ptr, RustBuffer operation_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_FETCH_ACTIVE_KEYSET
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_FETCH_ACTIVE_KEYSET
+uint64_t uniffi_cdk_ffi_fn_method_wallet_fetch_active_keyset(void* ptr
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_FETCH_MINT_INFO
@@ -1515,9 +1595,29 @@ uint64_t uniffi_cdk_ffi_fn_method_wallet_fetch_mint_quote(void* ptr, RustBuffer 
 uint64_t uniffi_cdk_ffi_fn_method_wallet_get_active_keyset(void* ptr
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_KEYSET_COUNT_FEE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_KEYSET_COUNT_FEE
+uint64_t uniffi_cdk_ffi_fn_method_wallet_get_keyset_count_fee(void* ptr, RustBuffer keyset_id, uint64_t count
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_KEYSET_FEES_AND_AMOUNTS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_KEYSET_FEES_AND_AMOUNTS
+uint64_t uniffi_cdk_ffi_fn_method_wallet_get_keyset_fees_and_amounts(void* ptr
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_KEYSET_FEES_AND_AMOUNTS_BY_ID
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_KEYSET_FEES_AND_AMOUNTS_BY_ID
+uint64_t uniffi_cdk_ffi_fn_method_wallet_get_keyset_fees_and_amounts_by_id(void* ptr, RustBuffer keyset_id
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_KEYSET_FEES_BY_ID
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_KEYSET_FEES_BY_ID
 uint64_t uniffi_cdk_ffi_fn_method_wallet_get_keyset_fees_by_id(void* ptr, RustBuffer keyset_id
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_MINT_KEYSETS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_MINT_KEYSETS
+uint64_t uniffi_cdk_ffi_fn_method_wallet_get_mint_keysets(void* ptr, RustBuffer filter
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_GET_PENDING_SENDS
@@ -1550,19 +1650,34 @@ uint64_t uniffi_cdk_ffi_fn_method_wallet_get_unspent_auth_proofs(void* ptr
 uint64_t uniffi_cdk_ffi_fn_method_wallet_list_transactions(void* ptr, RustBuffer direction
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_LOAD_KEYSET_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_LOAD_KEYSET_KEYS
+uint64_t uniffi_cdk_ffi_fn_method_wallet_load_keyset_keys(void* ptr, RustBuffer keyset_id
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_LOAD_MINT_INFO
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_LOAD_MINT_INFO
 uint64_t uniffi_cdk_ffi_fn_method_wallet_load_mint_info(void* ptr
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_LOAD_MINT_KEYSETS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_LOAD_MINT_KEYSETS
+uint64_t uniffi_cdk_ffi_fn_method_wallet_load_mint_keysets(void* ptr
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_BIP353_QUOTE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_BIP353_QUOTE
-uint64_t uniffi_cdk_ffi_fn_method_wallet_melt_bip353_quote(void* ptr, RustBuffer bip353_address, RustBuffer amount_msat
+uint64_t uniffi_cdk_ffi_fn_method_wallet_melt_bip353_quote(void* ptr, RustBuffer bip353_address, RustBuffer amount_msat, RustBuffer network
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_HUMAN_READABLE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_HUMAN_READABLE
-uint64_t uniffi_cdk_ffi_fn_method_wallet_melt_human_readable(void* ptr, RustBuffer address, RustBuffer amount_msat
+uint64_t uniffi_cdk_ffi_fn_method_wallet_melt_human_readable(void* ptr, RustBuffer address, RustBuffer amount_msat, RustBuffer network
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_HUMAN_READABLE_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_HUMAN_READABLE_QUOTE
+uint64_t uniffi_cdk_ffi_fn_method_wallet_melt_human_readable_quote(void* ptr, RustBuffer address, RustBuffer amount_msat, RustBuffer network
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_MELT_LIGHTNING_ADDRESS_QUOTE
@@ -1673,6 +1788,11 @@ uint64_t uniffi_cdk_ffi_fn_method_wallet_set_refresh_token(void* ptr, RustBuffer
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_SUBSCRIBE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_SUBSCRIBE
 uint64_t uniffi_cdk_ffi_fn_method_wallet_subscribe(void* ptr, RustBuffer params
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_SUBSCRIBE_MINT_QUOTE_STATE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_SUBSCRIBE_MINT_QUOTE_STATE
+uint64_t uniffi_cdk_ffi_fn_method_wallet_subscribe_mint_quote_state(void* ptr, RustBuffer quote_ids, RustBuffer payment_method
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_SWAP
@@ -1803,6 +1923,26 @@ uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_kv_read(void* ptr, RustBuffer p
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_KV_LIST
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_KV_LIST
 uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_kv_list(void* ptr, RustBuffer primary_namespace, RustBuffer secondary_namespace
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_ADD_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_ADD_P2PK_KEY
+uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_add_p2pk_key(void* ptr, RustBuffer pubkey, RustBuffer derivation_path, uint32_t derivation_index
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_GET_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_GET_P2PK_KEY
+uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_get_p2pk_key(void* ptr, RustBuffer pubkey
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_LIST_P2PK_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_LIST_P2PK_KEYS
+uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_list_p2pk_keys(void* ptr
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_LATEST_P2PK
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_LATEST_P2PK
+uint64_t uniffi_cdk_ffi_fn_method_walletdatabase_latest_p2pk(void* ptr
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETDATABASE_KV_WRITE
@@ -1990,6 +2130,11 @@ uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_mint_keysets(void* 
 uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_mint_quote(void* ptr, RustBuffer quote
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_P2PK_KEY
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_p2pk_key(void* ptr, RustBuffer pubkey, RustBuffer derivation_path, uint32_t derivation_index
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_SAGA
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_ADD_SAGA
 uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_add_saga(void* ptr, RustBuffer saga_json
@@ -2060,6 +2205,11 @@ uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_mint_quotes(void* p
 uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_mints(void* ptr
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_P2PK_KEY
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_p2pk_key(void* ptr, RustBuffer pubkey
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_PROOFS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_GET_PROOFS
 uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_get_proofs(void* ptr, RustBuffer mint_url, RustBuffer unit, RustBuffer state, RustBuffer spending_conditions
@@ -2113,6 +2263,16 @@ uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_kv_remove(void* ptr, Ru
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_KV_WRITE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_KV_WRITE
 uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_kv_write(void* ptr, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, RustBuffer value
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_LATEST_P2PK
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_LATEST_P2PK
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_latest_p2pk(void* ptr
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_LIST_P2PK_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_LIST_P2PK_KEYS
+uint64_t uniffi_cdk_ffi_fn_method_walletpostgresdatabase_list_p2pk_keys(void* ptr
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETPOSTGRESDATABASE_LIST_TRANSACTIONS
@@ -2207,12 +2367,12 @@ void uniffi_cdk_ffi_fn_free_walletrepository(void* ptr, RustCallStatus *out_stat
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CONSTRUCTOR_WALLETREPOSITORY_NEW
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CONSTRUCTOR_WALLETREPOSITORY_NEW
-void* uniffi_cdk_ffi_fn_constructor_walletrepository_new(RustBuffer mnemonic, void* db, RustCallStatus *out_status
+void* uniffi_cdk_ffi_fn_constructor_walletrepository_new(RustBuffer mnemonic, RustBuffer store, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CONSTRUCTOR_WALLETREPOSITORY_NEW_WITH_PROXY
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_CONSTRUCTOR_WALLETREPOSITORY_NEW_WITH_PROXY
-void* uniffi_cdk_ffi_fn_constructor_walletrepository_new_with_proxy(RustBuffer mnemonic, void* db, RustBuffer proxy_url, RustCallStatus *out_status
+void* uniffi_cdk_ffi_fn_constructor_walletrepository_new_with_proxy(RustBuffer mnemonic, RustBuffer store, RustBuffer proxy_url, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETREPOSITORY_CREATE_WALLET
@@ -2301,6 +2461,11 @@ uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_add_mint_keysets(void* pt
 uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_add_mint_quote(void* ptr, RustBuffer quote
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_ADD_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_ADD_P2PK_KEY
+uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_add_p2pk_key(void* ptr, RustBuffer pubkey, RustBuffer derivation_path, uint32_t derivation_index
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_ADD_SAGA
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_ADD_SAGA
 uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_add_saga(void* ptr, RustBuffer saga_json
@@ -2371,6 +2536,11 @@ uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_get_mint_quotes(void* ptr
 uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_get_mints(void* ptr
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_GET_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_GET_P2PK_KEY
+uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_get_p2pk_key(void* ptr, RustBuffer pubkey
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_GET_PROOFS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_GET_PROOFS
 uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_get_proofs(void* ptr, RustBuffer mint_url, RustBuffer unit, RustBuffer state, RustBuffer spending_conditions
@@ -2424,6 +2594,16 @@ uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_kv_remove(void* ptr, Rust
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_KV_WRITE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_KV_WRITE
 uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_kv_write(void* ptr, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, RustBuffer value
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_LATEST_P2PK
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_LATEST_P2PK
+uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_latest_p2pk(void* ptr
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_LIST_P2PK_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_LIST_P2PK_KEYS
+uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_list_p2pk_keys(void* ptr
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETSQLITEDATABASE_LIST_TRANSACTIONS
@@ -2506,9 +2686,19 @@ uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_update_proofs_state(void*
 uint64_t uniffi_cdk_ffi_fn_method_walletsqlitedatabase_update_saga(void* ptr, RustBuffer saga_json
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_CREATE_BIP321_URI
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_CREATE_BIP321_URI
+RustBuffer uniffi_cdk_ffi_fn_func_create_bip321_uri(RustBuffer creq, RustBuffer bolt11, RustBuffer bolt12, RustCallStatus *out_status
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_CREATE_WALLET_DB
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_CREATE_WALLET_DB
 void* uniffi_cdk_ffi_fn_func_create_wallet_db(RustBuffer backend, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_CUSTOM_WALLET_STORE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_CUSTOM_WALLET_STORE
+RustBuffer uniffi_cdk_ffi_fn_func_custom_wallet_store(void* db, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_DECODE_AUTH_PROOF
@@ -2763,6 +2953,16 @@ RustBuffer uniffi_cdk_ffi_fn_func_npubcash_get_pubkey(RustBuffer nostr_secret_ke
 RustBuffer uniffi_cdk_ffi_fn_func_npubcash_quote_to_mint_quote(RustBuffer quote, RustCallStatus *out_status
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_PARSE_BIP321_PAYMENT_INSTRUCTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_PARSE_BIP321_PAYMENT_INSTRUCTION
+uint64_t uniffi_cdk_ffi_fn_func_parse_bip321_payment_instruction(RustBuffer instruction, RustBuffer network
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_POSTGRES_WALLET_STORE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_POSTGRES_WALLET_STORE
+RustBuffer uniffi_cdk_ffi_fn_func_postgres_wallet_store(RustBuffer url, RustCallStatus *out_status
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_PROOF_HAS_DLEQ
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_PROOF_HAS_DLEQ
 int8_t uniffi_cdk_ffi_fn_func_proof_has_dleq(RustBuffer proof, RustCallStatus *out_status
@@ -2796,6 +2996,16 @@ RustBuffer uniffi_cdk_ffi_fn_func_proof_y(RustBuffer proof, RustCallStatus *out_
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_PROOFS_TOTAL_AMOUNT
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_PROOFS_TOTAL_AMOUNT
 RustBuffer uniffi_cdk_ffi_fn_func_proofs_total_amount(RustBuffer proofs, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_RESOLVE_BIP353_PAYMENT_INSTRUCTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_RESOLVE_BIP353_PAYMENT_INSTRUCTION
+uint64_t uniffi_cdk_ffi_fn_func_resolve_bip353_payment_instruction(void* wallet, RustBuffer address, RustBuffer network
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_SQLITE_WALLET_STORE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_SQLITE_WALLET_STORE
+RustBuffer uniffi_cdk_ffi_fn_func_sqlite_wallet_store(RustBuffer path, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_TRANSACTION_MATCHES_CONDITIONS
@@ -3083,9 +3293,21 @@ void ffi_cdk_ffi_rust_future_free_void(uint64_t handle
 void ffi_cdk_ffi_rust_future_complete_void(uint64_t handle, RustCallStatus *out_status
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_CREATE_BIP321_URI
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_CREATE_BIP321_URI
+uint16_t uniffi_cdk_ffi_checksum_func_create_bip321_uri(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_CREATE_WALLET_DB
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_CREATE_WALLET_DB
 uint16_t uniffi_cdk_ffi_checksum_func_create_wallet_db(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_CUSTOM_WALLET_STORE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_CUSTOM_WALLET_STORE
+uint16_t uniffi_cdk_ffi_checksum_func_custom_wallet_store(void
     
 );
 #endif
@@ -3389,6 +3611,18 @@ uint16_t uniffi_cdk_ffi_checksum_func_npubcash_quote_to_mint_quote(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_PARSE_BIP321_PAYMENT_INSTRUCTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_PARSE_BIP321_PAYMENT_INSTRUCTION
+uint16_t uniffi_cdk_ffi_checksum_func_parse_bip321_payment_instruction(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_POSTGRES_WALLET_STORE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_POSTGRES_WALLET_STORE
+uint16_t uniffi_cdk_ffi_checksum_func_postgres_wallet_store(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_PROOF_HAS_DLEQ
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_PROOF_HAS_DLEQ
 uint16_t uniffi_cdk_ffi_checksum_func_proof_has_dleq(void
@@ -3428,6 +3662,18 @@ uint16_t uniffi_cdk_ffi_checksum_func_proof_y(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_PROOFS_TOTAL_AMOUNT
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_PROOFS_TOTAL_AMOUNT
 uint16_t uniffi_cdk_ffi_checksum_func_proofs_total_amount(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_RESOLVE_BIP353_PAYMENT_INSTRUCTION
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_RESOLVE_BIP353_PAYMENT_INSTRUCTION
+uint16_t uniffi_cdk_ffi_checksum_func_resolve_bip353_payment_instruction(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_SQLITE_WALLET_STORE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_SQLITE_WALLET_STORE
+uint16_t uniffi_cdk_ffi_checksum_func_sqlite_wallet_store(void
     
 );
 #endif
@@ -3506,6 +3752,18 @@ uint16_t uniffi_cdk_ffi_checksum_method_paymentrequest_payment_id(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_PAYMENTREQUEST_SINGLE_USE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_PAYMENTREQUEST_SINGLE_USE
 uint16_t uniffi_cdk_ffi_checksum_method_paymentrequest_single_use(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_PAYMENTREQUEST_TO_BECH32_STRING
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_PAYMENTREQUEST_TO_BECH32_STRING
+uint16_t uniffi_cdk_ffi_checksum_method_paymentrequest_to_bech32_string(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_PAYMENTREQUEST_TO_BIP321
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_PAYMENTREQUEST_TO_BIP321
+uint16_t uniffi_cdk_ffi_checksum_method_paymentrequest_to_bip321(void
     
 );
 #endif
@@ -3785,6 +4043,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_MINT_QUOTE_STATUS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_MINT_QUOTE_STATUS
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_PROOFS_SPENT
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_PROOFS_SPENT
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_check_proofs_spent(void
@@ -3794,6 +4058,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_check_proofs_spent(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_SEND_STATUS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_CHECK_SEND_STATUS
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_check_send_status(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_FETCH_ACTIVE_KEYSET
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_FETCH_ACTIVE_KEYSET
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_fetch_active_keyset(void
     
 );
 #endif
@@ -3815,9 +4085,33 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_get_active_keyset(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_KEYSET_COUNT_FEE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_KEYSET_COUNT_FEE
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_get_keyset_count_fee(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_KEYSET_FEES_AND_AMOUNTS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_KEYSET_FEES_AND_AMOUNTS
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_get_keyset_fees_and_amounts(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_KEYSET_FEES_AND_AMOUNTS_BY_ID
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_KEYSET_FEES_AND_AMOUNTS_BY_ID
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_get_keyset_fees_and_amounts_by_id(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_KEYSET_FEES_BY_ID
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_KEYSET_FEES_BY_ID
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_get_keyset_fees_by_id(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_MINT_KEYSETS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_GET_MINT_KEYSETS
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_get_mint_keysets(void
     
 );
 #endif
@@ -3857,9 +4151,21 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_list_transactions(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_LOAD_KEYSET_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_LOAD_KEYSET_KEYS
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_load_keyset_keys(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_LOAD_MINT_INFO
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_LOAD_MINT_INFO
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_load_mint_info(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_LOAD_MINT_KEYSETS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_LOAD_MINT_KEYSETS
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_load_mint_keysets(void
     
 );
 #endif
@@ -3872,6 +4178,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_melt_bip353_quote(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_MELT_HUMAN_READABLE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_MELT_HUMAN_READABLE
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_MELT_HUMAN_READABLE_QUOTE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_MELT_HUMAN_READABLE_QUOTE
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_melt_human_readable_quote(void
     
 );
 #endif
@@ -4004,6 +4316,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_set_refresh_token(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_SUBSCRIBE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_SUBSCRIBE
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_subscribe(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_SUBSCRIBE_MINT_QUOTE_STATE
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_SUBSCRIBE_MINT_QUOTE_STATE
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_subscribe_mint_quote_state(void
     
 );
 #endif
@@ -4142,6 +4460,30 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_kv_read(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_KV_LIST
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_KV_LIST
 uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_kv_list(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_ADD_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_ADD_P2PK_KEY
+uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_add_p2pk_key(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_GET_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_GET_P2PK_KEY
+uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_get_p2pk_key(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_LIST_P2PK_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_LIST_P2PK_KEYS
+uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_list_p2pk_keys(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_LATEST_P2PK
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETDATABASE_LATEST_P2PK
+uint16_t uniffi_cdk_ffi_checksum_method_walletdatabase_latest_p2pk(void
     
 );
 #endif
@@ -4349,6 +4691,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_mint_quote(vo
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_P2PK_KEY
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_p2pk_key(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_SAGA
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_ADD_SAGA
 uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_add_saga(void
@@ -4433,6 +4781,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_mints(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_P2PK_KEY
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_p2pk_key(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_PROOFS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_GET_PROOFS
 uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_get_proofs(void
@@ -4496,6 +4850,18 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_kv_remove(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_KV_WRITE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_KV_WRITE
 uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_kv_write(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_LATEST_P2PK
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_LATEST_P2PK
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_latest_p2pk(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_LIST_P2PK_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETPOSTGRESDATABASE_LIST_P2PK_KEYS
+uint16_t uniffi_cdk_ffi_checksum_method_walletpostgresdatabase_list_p2pk_keys(void
     
 );
 #endif
@@ -4673,6 +5039,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_add_mint_quote(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_ADD_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_ADD_P2PK_KEY
+uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_add_p2pk_key(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_ADD_SAGA
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_ADD_SAGA
 uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_add_saga(void
@@ -4757,6 +5129,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_get_mints(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_GET_P2PK_KEY
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_GET_P2PK_KEY
+uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_get_p2pk_key(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_GET_PROOFS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_GET_PROOFS
 uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_get_proofs(void
@@ -4820,6 +5198,18 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_kv_remove(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_KV_WRITE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_KV_WRITE
 uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_kv_write(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_LATEST_P2PK
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_LATEST_P2PK
+uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_latest_p2pk(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_LIST_P2PK_KEYS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETSQLITEDATABASE_LIST_P2PK_KEYS
+uint16_t uniffi_cdk_ffi_checksum_method_walletsqlitedatabase_list_p2pk_keys(void
     
 );
 #endif
@@ -5015,35 +5405,39 @@ uint32_t ffi_cdk_ffi_uniffi_contract_version(void
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod14(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer direction, RustBuffer unit, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod15(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod16(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod17(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, RustBuffer value, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod18(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod19(uint64_t uniffi_handle, RustBuffer added, RustBuffer removed_ys, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod20(uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod21(uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod22(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod23(uint64_t uniffi_handle, RustBuffer old_mint_url, RustBuffer new_mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod24(uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod25(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer mint_info, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod26(uint64_t uniffi_handle, RustBuffer mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod27(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer keysets, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod28(uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod29(uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod30(uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod31(uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod32(uint64_t uniffi_handle, RustBuffer keyset, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod33(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod34(uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod35(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod36(uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteI8 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod17(uint64_t uniffi_handle, RustBuffer pubkey, RustBuffer derivation_path, uint32_t derivation_index, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod18(uint64_t uniffi_handle, RustBuffer pubkey, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod19(uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod20(uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod21(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, RustBuffer value, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod22(uint64_t uniffi_handle, RustBuffer primary_namespace, RustBuffer secondary_namespace, RustBuffer key, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod23(uint64_t uniffi_handle, RustBuffer added, RustBuffer removed_ys, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod24(uint64_t uniffi_handle, RustBuffer ys, RustBuffer state, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod25(uint64_t uniffi_handle, RustBuffer transaction, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod26(uint64_t uniffi_handle, RustBuffer transaction_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod27(uint64_t uniffi_handle, RustBuffer old_mint_url, RustBuffer new_mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod28(uint64_t uniffi_handle, RustBuffer keyset_id, uint32_t count, UniffiForeignFutureCompleteU32 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod29(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer mint_info, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod30(uint64_t uniffi_handle, RustBuffer mint_url, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod31(uint64_t uniffi_handle, RustBuffer mint_url, RustBuffer keysets, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod32(uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod33(uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod34(uint64_t uniffi_handle, RustBuffer quote, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod35(uint64_t uniffi_handle, RustBuffer quote_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod36(uint64_t uniffi_handle, RustBuffer keyset, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod37(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod38(uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod39(uint64_t uniffi_handle, RustBuffer ys, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod40(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod41(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod42(uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod43(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod44(uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
- void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod45(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod38(uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod39(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod40(uint64_t uniffi_handle, RustBuffer saga_json, UniffiForeignFutureCompleteI8 uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod41(uint64_t uniffi_handle, RustBuffer id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod42(uint64_t uniffi_handle, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod43(uint64_t uniffi_handle, RustBuffer ys, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod44(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod45(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteRustBuffer uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod46(uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod47(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod48(uint64_t uniffi_handle, RustBuffer quote_id, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
+ void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseMethod49(uint64_t uniffi_handle, RustBuffer operation_id, UniffiForeignFutureCompleteVoid uniffi_future_callback, uint64_t uniffi_callback_data, UniffiForeignFuture* uniffi_out_return);
  void cdk_ffi_cgo_dispatchCallbackInterfaceWalletDatabaseFree(uint64_t handle);
 
 void cdkffi_uniffiFutureContinuationCallback(uint64_t, int8_t);

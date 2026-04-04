@@ -7,7 +7,7 @@ WORK_DIR="${ROOT_DIR}/.work"
 CDK_DIR="${WORK_DIR}/cdk"
 
 CDK_REPO="${CDK_REPO:-https://github.com/cashubtc/cdk.git}"
-CDK_REF="${CDK_REF:-v0.15.1}"
+CDK_REF="${CDK_REF:-v0.16.0}"
 
 mkdir -p "${WORK_DIR}"
 
