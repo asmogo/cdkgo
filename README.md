@@ -51,4 +51,4 @@ make clean      # rm -rf .work bindings/cdkffi
 |---------------------------|----------------------|-----------------------------------------------------------|
 | `ci.yml`                  | Push / PR            | Regenerates bindings; fails if committed source has drifted |
 | `update-bindings-pr.yml`  | Scheduled / manual   | Rebuilds cross-platform and opens a PR with updated files |
-| `release.yml`             | `v*` tag             | Validates artifacts and publishes a GitHub release        |
+| `release.yml`             | Dispatch / manual    | Rebuilds from a CDK ref, tags the repo, and publishes a GitHub release |
