@@ -1,4 +1,4 @@
-name: cdkgo Release
+name: cdk-go Release
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       release_tag:
-        description: Release tag for cdkgo (e.g. v0.1.0)
+        description: Release tag for cdk-go (e.g. v0.1.0)
         required: true
 
 permissions:
@@ -17,7 +17,7 @@ jobs:
   publish-release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout cdkgo
+      - name: Checkout cdk-go
         uses: actions/checkout@v4
 
       - name: Setup Go
@@ -45,7 +45,7 @@ jobs:
       - name: Build release archive
         run: |
           mkdir -p dist
-          tar -czf "dist/cdkgo-bindings-${{ github.ref_name || github.event.inputs.release_tag }}.tar.gz" bindings/cdkffi
+          tar -czf "dist/cdk-go-bindings-${{ github.ref_name || github.event.inputs.release_tag }}.tar.gz" bindings/cdkffi
 
       - name: Publish release assets
         env:
@@ -60,7 +60,7 @@ jobs:
             gh release upload "$TAG" dist/*.tar.gz --clobber
           else
             gh release create "$TAG" \
-              --title "cdkgo $TAG" \
-              --notes "Go bindings release for cdkgo (includes linux+mac prebuilt libcdk_ffi)" \
+              --title "cdk-go $TAG" \
+              --notes "Go bindings release for cdk-go (includes linux+mac prebuilt libcdk_ffi)" \
               dist/*.tar.gz
           fi

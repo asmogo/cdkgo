@@ -1,4 +1,4 @@
-# cdkgo
+# cdk-go
 
 Go FFI bindings for [cashubtc/cdk](https://github.com/cashubtc/cdk) (Cashu Development Kit), generated via [uniffi-bindgen-go](https://github.com/NordSecurity/uniffi-bindgen-go).
 
@@ -7,7 +7,7 @@ Prebuilt native libraries are committed to this repo — downstream consumers on
 ## Usage
 
 ```bash
-go get github.com/asmogo/cdkgo
+go get github.com/cashubtc/cdk-go
 ```
 
 CGO link flags are automatically selected per platform. No manual setup required.
