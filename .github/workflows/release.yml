@@ -1,40 +1,154 @@
-name: cdk-go Release
+name: Publish Go Bindings
 
 on:
-  push:
-    tags:
-      - "v*"
+  repository_dispatch:
+    types: [cdk-release]
   workflow_dispatch:
     inputs:
-      release_tag:
-        description: Release tag for cdk-go (e.g. v0.1.0)
+      version:
+        description: New version (e.g. 0.1.0)
         required: true
+        type: string
+      cdk_repo:
+        description: CDK repository (owner/repo format)
+        required: true
+        default: "cashubtc/cdk"
+        type: string
+      cdk_ref:
+        description: CDK repository ref (branch/tag)
+        required: true
+        default: "main"
+        type: string
 
 permissions:
   contents: write
 
 jobs:
-  publish-release:
+  prepare-release:
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.vars.outputs.version }}
+      cdk_repo: ${{ steps.vars.outputs.cdk_repo }}
+      cdk_ref: ${{ steps.vars.outputs.cdk_ref }}
+      is_prerelease: ${{ steps.vars.outputs.is_prerelease }}
+    steps:
+      - name: Set variables
+        id: vars
+        run: |
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            VERSION="${{ github.event.client_payload.version }}"
+            echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+            echo "cdk_repo=${{ github.event.client_payload.cdk_repo || 'cashubtc/cdk' }}" >> "$GITHUB_OUTPUT"
+            echo "cdk_ref=${{ github.event.client_payload.cdk_ref || github.event.client_payload.version }}" >> "$GITHUB_OUTPUT"
+          else
+            VERSION="${{ inputs.version }}"
+            echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+            echo "cdk_repo=${{ inputs.cdk_repo }}" >> "$GITHUB_OUTPUT"
+            echo "cdk_ref=${{ inputs.cdk_ref }}" >> "$GITHUB_OUTPUT"
+          fi
+
+          if echo "$VERSION" | grep -qi "rc"; then
+            echo "is_prerelease=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  build-platform-bindings:
+    needs: prepare-release
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            platform_key: linux_amd64
+            native_lib: bindings/cdkffi/native/linux_amd64/libcdk_ffi.so
+            include_sources: "true"
+          - os: macos-latest
+            platform_key: darwin_arm64
+            native_lib: bindings/cdkffi/native/darwin_arm64/libcdk_ffi.dylib
+            include_sources: "false"
+    runs-on: ${{ matrix.os }}
+    env:
+      CDK_REPO: https://github.com/${{ needs.prepare-release.outputs.cdk_repo }}.git
+      CDK_REF: ${{ needs.prepare-release.outputs.cdk_ref }}
+      CARGO_TERM_COLOR: always
     steps:
       - name: Checkout cdk-go
         uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
 
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
           go-version: "1.22"
 
-      - name: Validate committed source bindings exist
-        run: |
-          test -f bindings/cdkffi/cdk_ffi.go
-          test -f bindings/cdkffi/cdk_ffi.h
-          test -f bindings/cdkffi/CDK_COMMIT
+      - name: Cache Rust and Cargo
+        uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.platform_key }}
 
-      - name: Validate committed native libs exist
+      - name: Cache Go build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+
+      - name: Generate bindings for platform
+        run: ./scripts/generate-bindings.sh
+
+      - name: Verify generated package
+        run: ./scripts/verify-go.sh
+
+      - name: Prepare artifact bundle
         run: |
-          test -f bindings/cdkffi/native/linux_amd64/libcdk_ffi.so
-          test -f bindings/cdkffi/native/darwin_arm64/libcdk_ffi.dylib
+          mkdir -p out/bindings/cdkffi/native/${{ matrix.platform_key }}
+          cp "${{ matrix.native_lib }}" "out/bindings/cdkffi/native/${{ matrix.platform_key }}/"
+
+          if [ "${{ matrix.include_sources }}" = "true" ]; then
+            cp bindings/cdkffi/cdk_ffi.go out/bindings/cdkffi/
+            cp bindings/cdkffi/cdk_ffi.h out/bindings/cdkffi/
+            cp bindings/cdkffi/CDK_COMMIT out/bindings/cdkffi/
+          fi
+
+      - name: Upload platform bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: bundle-${{ matrix.platform_key }}
+          path: out/
+
+  publish-release:
+    runs-on: ubuntu-latest
+    needs: [prepare-release, build-platform-bindings]
+    steps:
+      - name: Checkout cdk-go
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Download generated bundles
+        uses: actions/download-artifact@v4
+        with:
+          path: .artifacts
+          merge-multiple: true
+
+      - name: Apply generated bundles to repository
+        run: |
+          mkdir -p bindings/cdkffi
+          cp -R .artifacts/bindings/cdkffi/* bindings/cdkffi/
+
+      - name: Regenerate checksums from merged artifacts
+        run: ./scripts/update-checksums.sh
 
       - name: Verify native library checksums
         run: ./scripts/verify-checksums.sh
@@ -42,25 +156,56 @@ jobs:
       - name: Verify package on Linux
         run: ./scripts/verify-go.sh
 
+      - name: Capture generated CDK commit
+        id: cdk_commit
+        run: echo "value=$(cat bindings/cdkffi/CDK_COMMIT)" >> "$GITHUB_OUTPUT"
+
+      - name: Commit generated bindings
+        run: |
+          TARGET_BRANCH="${GITHUB_REF_NAME}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bindings/cdkffi
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "Release version ${{ needs.prepare-release.outputs.version }}"
+            git fetch origin "${TARGET_BRANCH}"
+            git rebase "origin/${TARGET_BRANCH}"
+            git push origin "HEAD:${TARGET_BRANCH}"
+          fi
+
+      - name: Create and push tag
+        run: |
+          git tag -a "v${{ needs.prepare-release.outputs.version }}" -m "Release version ${{ needs.prepare-release.outputs.version }}"
+          git push origin "v${{ needs.prepare-release.outputs.version }}"
+
       - name: Build release archive
         run: |
           mkdir -p dist
-          tar -czf "dist/cdk-go-bindings-${{ github.ref_name || github.event.inputs.release_tag }}.tar.gz" bindings/cdkffi
+          tar -czf "dist/cdk-go-bindings-v${{ needs.prepare-release.outputs.version }}.tar.gz" bindings/cdkffi
 
-      - name: Publish release assets
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ needs.prepare-release.outputs.version }}
+          name: cdk-go v${{ needs.prepare-release.outputs.version }}
+          body: |
+            ## cdk-go ${{ needs.prepare-release.outputs.version }}
+
+            Generated from `${{ needs.prepare-release.outputs.cdk_repo }}` at `${{ needs.prepare-release.outputs.cdk_ref }}`.
+
+            - Generated CDK commit: `${{ steps.cdk_commit.outputs.value }}`
+            - Included native libraries: `linux_amd64`, `darwin_arm64`
+
+            Install with:
+
+            ```bash
+            go get github.com/cashubtc/cdk-go@v${{ needs.prepare-release.outputs.version }}
+            ```
+          files: |
+            dist/cdk-go-bindings-v${{ needs.prepare-release.outputs.version }}.tar.gz
+          draft: false
+          prerelease: ${{ needs.prepare-release.outputs.is_prerelease == 'true' }}
         env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          TAG="${{ github.ref_name }}"
-          if [ -n "${{ github.event.inputs.release_tag }}" ]; then
-            TAG="${{ github.event.inputs.release_tag }}"
-          fi
-
-          if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release upload "$TAG" dist/*.tar.gz --clobber
-          else
-            gh release create "$TAG" \
-              --title "cdk-go $TAG" \
-              --notes "Go bindings release for cdk-go (includes linux+mac prebuilt libcdk_ffi)" \
-              dist/*.tar.gz
-          fi
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
