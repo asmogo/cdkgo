@@ -162,6 +162,7 @@ jobs:
 
       - name: Commit generated bindings
         run: |
+          TARGET_BRANCH="${GITHUB_REF_NAME}"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add bindings/cdkffi
@@ -169,7 +170,9 @@ jobs:
             echo "No generated changes to commit"
           else
             git commit -m "Release version ${{ needs.prepare-release.outputs.version }}"
-            git push origin HEAD:main
+            git fetch origin "${TARGET_BRANCH}"
+            git rebase "origin/${TARGET_BRANCH}"
+            git push origin "HEAD:${TARGET_BRANCH}"
           fi
 
       - name: Create and push tag
